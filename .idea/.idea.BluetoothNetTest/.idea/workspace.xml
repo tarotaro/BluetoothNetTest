@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42554ed1-e464-4d59-be55-b4f7912e8a18" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BluetoothController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-599">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <folding>
+                <marker date="1537618416438" expanded="true" signature="6:88" ph="..." />
+                <marker date="1537618416438" expanded="true" signature="138:2569" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="404:461" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="537:544" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="599:1034" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="626:1031" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="688:743" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="793:1023" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1065:1352" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1116:1212" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1237:1342" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1386:1668" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1697:1982" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1753:1895" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="1908:1969" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="2011:2120" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="2153:2566" ph="{...}" />
+                <marker date="1537618416438" expanded="true" signature="2441:2518" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Assets/Script/BluetoothController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="333" />
+    <option name="y" value="252" />
+    <option name="width" value="1920" />
+    <option name="height" value="1008" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest" type="483dac07:UnityExplorerNode$Root" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="31938">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="31938" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42554ed1-e464-4d59-be55-b4f7912e8a18" name="Default" comment="" />
+      <created>1536503214068</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536503214068</updated>
+      <workItem from="1536503218127" duration="15000" />
+      <workItem from="1536581450311" duration="8876000" />
+      <workItem from="1536765217598" duration="3941000" />
+      <workItem from="1537615725498" duration="3148000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15980000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="333" y="252" width="1920" height="1008" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25772098" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956093" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" isUnityUI="true" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding>
+            <marker date="1537618416438" expanded="true" signature="6:88" ph="..." />
+            <marker date="1537618416438" expanded="true" signature="138:2569" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="404:461" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="537:544" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="599:1034" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="626:1031" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="688:743" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="793:1023" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1065:1352" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1116:1212" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1237:1342" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1386:1668" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1697:1982" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1753:1895" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1908:1969" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2011:2120" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2153:2566" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2441:2518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding>
+            <marker date="1537618416438" expanded="true" signature="6:88" ph="..." />
+            <marker date="1537618416438" expanded="true" signature="138:2569" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="404:461" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="537:544" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="599:1034" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="626:1031" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="688:743" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="793:1023" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1065:1352" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1116:1212" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1237:1342" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1386:1668" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1697:1982" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1753:1895" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1908:1969" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2011:2120" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2153:2566" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2441:2518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1537618416438" expanded="true" signature="6:88" ph="..." />
+            <marker date="1537618416438" expanded="true" signature="138:2569" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="404:461" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="537:544" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="599:1034" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="626:1031" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="688:743" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="793:1023" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1065:1352" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1116:1212" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1237:1342" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1386:1668" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1697:1982" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1753:1895" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1908:1969" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2011:2120" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2153:2566" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2441:2518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-599">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <marker date="1537618416438" expanded="true" signature="6:88" ph="..." />
+            <marker date="1537618416438" expanded="true" signature="138:2569" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="404:461" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="537:544" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="599:1034" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="626:1031" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="688:743" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="793:1023" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1065:1352" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1116:1212" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1237:1342" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1386:1668" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1697:1982" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1753:1895" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="1908:1969" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2011:2120" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2153:2566" ph="{...}" />
+            <marker date="1537618416438" expanded="true" signature="2441:2518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
