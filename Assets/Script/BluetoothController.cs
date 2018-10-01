@@ -9,7 +9,10 @@ public class BluetoothController : MonoBehaviour
 
 	[SerializeField] private Dropdown _dropdown;
 	[SerializeField] private Text _text;
+	[SerializeField] private Text _dataLengthPerSecond;
 	public float countdown = 5.0f;
+	private float _timePerSecond = 0;
+	private int _alldataLength = 0;
 
 #if UNITY_ANDROID
 	private AndroidJavaClass _javaClass;
@@ -33,14 +36,15 @@ public class BluetoothController : MonoBehaviour
 	void Update () {
 		if (_javaClass != null)
 		{
+			int state = connectState();
 			countdown -= Time.deltaTime;
-			if (countdown <= 0.0f)
+			if (countdown <= 0.0f && state != 1)
 			{
 				getSearchDevice();
 				countdown = 5.0f;
 			}
 
-			int state = connectState();
+			
 			switch (state)
 			{
 				case 0:
@@ -59,10 +63,42 @@ public class BluetoothController : MonoBehaviour
                     break;
 						
 			}
+
+			if (state == 1)
+			{
+				recv();				
+				send();				
+			}
 			
 		}
 	}
 
+	private void send()
+	{
+		byte[] data = new byte [10];
+		for (byte cnt = 0; cnt < 10; cnt++)
+		{
+			data[cnt] = cnt;
+		}
+		_javaClass.CallStatic("send",data,10);
+	}
+	
+	private void recv(){
+	    byte[] data = new byte [10];
+        bool isGetted = _javaClass.CallStatic<bool>("recv",data,10);
+        
+        if(isGetted){
+            _alldataLength += 10;        
+        }        
+        _timePerSecond +=  Time.deltaTime;
+		if (_timePerSecond > 1)
+		{
+			_dataLengthPerSecond.text = (_alldataLength / _timePerSecond).ToString();
+			_alldataLength = 0;
+			_timePerSecond = 0;
+		}
+             
+	}	
 
    public void ServerStart()
    {
