@@ -13,6 +13,7 @@ public class BluetoothController : MonoBehaviour
 	public float countdown = 5.0f;
 	private float _timePerSecond = 0;
 	private int _alldataLength = 0;
+    private int _prealldataLength = 0;
     private int frame = 0;
 
 #if UNITY_ANDROID
@@ -80,12 +81,12 @@ public class BluetoothController : MonoBehaviour
 
 	private void send()
 	{
-		byte[] data = new byte [512];
-		for (int cnt = 0; cnt < 512; cnt++)
+		byte[] data = new byte [128];
+		for (int cnt = 0; cnt < 128; cnt++)
 		{
 			data[cnt] = (Byte)cnt;
 		}
-		_javaClass.CallStatic("send",data,512);
+		_javaClass.CallStatic("send",data,128);
 	}
 	
 	private void recv(){
@@ -98,8 +99,9 @@ public class BluetoothController : MonoBehaviour
         _timePerSecond +=  Time.deltaTime;
 		if (_timePerSecond > 1)
 		{
-			_dataLengthPerSecond.text = (_alldataLength / _timePerSecond).ToString();
-			_alldataLength = 0;
+            _dataLengthPerSecond.text = ((_prealldataLength + _alldataLength) / 2*(_timePerSecond)).ToString();
+            _prealldataLength = _alldataLength;
+            _alldataLength = 0;
 			_timePerSecond = 0;
 		}
              
