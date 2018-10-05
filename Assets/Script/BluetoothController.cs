@@ -84,22 +84,23 @@ public class BluetoothController : MonoBehaviour
 		byte[] data = new byte [128];
 		for (int cnt = 0; cnt < 128; cnt++)
 		{
-			data[cnt] = (Byte)cnt;
+			data[cnt] = (byte)cnt;
 		}
 		_javaClass.CallStatic("send",data,128);
 	}
 	
 	private void recv(){
-	    byte[] data = new byte [128];
-        bool isGetted = _javaClass.CallStatic<bool>("recv",data,128);
 
-        if(isGetted){
-            _alldataLength += 128;        
+        byte[] data 
+         = _javaClass.CallStatic<byte[]>("recv",256);
+
+        if(data!=null){
+            _alldataLength += 256;
         }        
         _timePerSecond +=  Time.deltaTime;
 		if (_timePerSecond > 1)
 		{
-            _dataLengthPerSecond.text = ((_prealldataLength + _alldataLength) / 2*(_timePerSecond)).ToString();
+            _dataLengthPerSecond.text = ((_prealldataLength + _alldataLength) / (2*(_timePerSecond))).ToString();
             _prealldataLength = _alldataLength;
             _alldataLength = 0;
 			_timePerSecond = 0;
