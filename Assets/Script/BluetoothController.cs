@@ -10,6 +10,8 @@ public class BluetoothController : MonoBehaviour
 	[SerializeField] private Dropdown _dropdown;
 	[SerializeField] private Text _text;
 	[SerializeField] private Text _dataLengthPerSecond;
+	[SerializeField] private Text _readTime;
+	[SerializeField] private Text _writeTime;
 	public float countdown = 5.0f;
 	private float _timePerSecond = 0;
 	private int _alldataLength = 0;
@@ -73,7 +75,12 @@ public class BluetoothController : MonoBehaviour
                 {
                     send();
                 }
-                frame++; 
+                frame++;
+				if (!_isServerStart && state == 1)
+				{
+					_readTime.text = " " + _javaClass.CallStatic<long>("getReadTime");
+					_writeTime.text = " " + _javaClass.CallStatic<long>("getWriteTime");
+				}
 			}
 			
 		}
