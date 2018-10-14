@@ -169,7 +169,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 8.0
+  iOSTargetOSVersionString: 10.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -641,8 +641,10 @@ PlayerSettings:
     25: UNITY_POST_PROCESSING_STACK_V2
     26: UNITY_POST_PROCESSING_STACK_V2
     27: UNITY_POST_PROCESSING_STACK_V2
-  platformArchitecture: {}
-  scriptingBackend: {}
+  platformArchitecture:
+    iOS: 1
+  scriptingBackend:
+    iOS: 1
   il2cppCompilerConfiguration: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0

@@ -6,6 +6,7 @@
       <e p="Assets" t="Include">
         <e p="Script" t="Include">
           <e p="BluetoothController.cs" t="Include" />
+          <e p="BluetoothiOSInterface.cs" t="Include" />
           <e p="JsonHelper.cs" t="Include" />
         </e>
       </e>
