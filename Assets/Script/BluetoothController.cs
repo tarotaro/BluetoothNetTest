@@ -66,6 +66,18 @@ public class BluetoothController : MonoBehaviour
                 _isServerStart = false;
                 break;						
 		}
+		if (state == 1)
+		{
+			recv();
+			send();
+                
+			frame++;
+			if (!_isServerStart && state == 1)
+			{
+				_readTime.text = " " + BluetoothiOSInterface._getReadTime();
+				_writeTime.text = " " + BluetoothiOSInterface._getWriteTime();
+			}
+		}
 #endif 
 #if UNITY_ANDROID		
 		if (_javaClass != null)
@@ -101,10 +113,8 @@ public class BluetoothController : MonoBehaviour
 			if (state == 1)
 			{
 				recv();
-                //if (frame % 5 == 0)
-                {
-                    send();
-                }
+                send();
+                
                 frame++;
 				if (!_isServerStart && state == 1)
 				{
@@ -127,6 +137,14 @@ public class BluetoothController : MonoBehaviour
 		}
 		_javaClass.CallStatic("send",data,128);
 #endif
+#if UNITY_IOS
+		byte[] data = new byte [128];
+		for (int cnt = 0; cnt < 128; cnt++)
+		{
+			data[cnt] = (byte)cnt;
+		}
+		BluetoothiOSInterface._send(data,128);
+#endif
 	}
 	
 	private void recv(){
@@ -145,7 +163,24 @@ public class BluetoothController : MonoBehaviour
             _alldataLength = 0;
 			_timePerSecond = 0;
 		}
-#endif             
+#endif
+#if UNITY_IOS
+		byte [] data = new byte[256];
+		bool ret = BluetoothiOSInterface._recv(data,256);
+
+		if (ret)
+		{
+			_alldataLength += 256;			
+		}
+		_timePerSecond +=  Time.deltaTime;
+		if (_timePerSecond > 1)
+		{
+			_dataLengthPerSecond.text = ((_prealldataLength + _alldataLength) / (2*(_timePerSecond))).ToString();
+			_prealldataLength = _alldataLength;
+			_alldataLength = 0;
+			_timePerSecond = 0;
+		}
+#endif
 	}	
 
    public void ServerStart()
@@ -191,7 +226,9 @@ public class BluetoothController : MonoBehaviour
             Debug.Log("サーチなしでは使用できません");
         }
 #endif
-#if UNITY_IOS	    
+#if UNITY_IOS
+	    String address = _devices[_dropdown.value].address;		    
+	    BluetoothiOSInterface._connectById(address);
 #endif	    	    
     }
 
@@ -250,6 +287,9 @@ public class BluetoothController : MonoBehaviour
             _javaClass.CallStatic("disConnect");
         }
 #endif
+#if UNITY_IOS
+	    BluetoothiOSInterface._disConnect();
+#endif	    
     }
 
 }

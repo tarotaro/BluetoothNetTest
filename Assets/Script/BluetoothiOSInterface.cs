@@ -17,7 +17,7 @@ public class BluetoothiOSInterface {
 	[DllImport("__Internal")]
 	public static extern void _send(byte[] data,int len);
 	[DllImport("__Internal")]
-	public static extern byte[] _recv(int len);
+	public static extern bool _recv(byte[] data,int len);
 	[DllImport("__Internal")]
 	public static extern long _getReadTime();
 	[DllImport("__Internal")]
