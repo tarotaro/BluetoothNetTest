@@ -18,6 +18,7 @@ public class BluetoothController : MonoBehaviour
     private int _prealldataLength = 0;
     private int frame = 0;
     private bool _isServerStart = false;
+	
 
 #if UNITY_ANDROID
 	private AndroidJavaClass _javaClass;    
@@ -52,8 +53,7 @@ public class BluetoothController : MonoBehaviour
 		switch (state)
 		{
 			case 0:
-				_text.text = "接続していません";
-                _isServerStart = false;
+				_text.text = "接続していません";                
 				break;
 			case 1:
 				_text.text = "すでに接続しています";
@@ -66,6 +66,11 @@ public class BluetoothController : MonoBehaviour
                 _isServerStart = false;
                 break;						
 		}
+
+		if (_alldataLength > 0 || _prealldataLength> 0)
+		{
+			state = 1;
+		} 
 		if (state == 1)
 		{
 			recv();
@@ -77,6 +82,11 @@ public class BluetoothController : MonoBehaviour
 				_readTime.text = " " + BluetoothiOSInterface._getReadTime();
 				_writeTime.text = " " + BluetoothiOSInterface._getWriteTime();
 			}
+			
+		}
+		else
+		{
+			recv();
 		}
 #endif 
 #if UNITY_ANDROID		
@@ -181,10 +191,10 @@ public class BluetoothController : MonoBehaviour
 			_timePerSecond = 0;
 		}
 #endif
-	}	
+	}
 
-   public void ServerStart()
-   {
+    public void ServerStart()
+    {
 #if UNITY_ANDROID
 	   if (_javaClass == null)
 	   {
@@ -196,7 +206,11 @@ public class BluetoothController : MonoBehaviour
             _javaClass.CallStatic("startServer");
         }
 #endif
-	}
+#if UNITY_IOS
+        _isServerStart = true;
+        BluetoothiOSInterface._startServer();
+#endif
+    }
 
     public void onSearchServer()
     {
