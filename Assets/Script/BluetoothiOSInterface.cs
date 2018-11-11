@@ -5,7 +5,9 @@ public class BluetoothiOSInterface {
 
 	[DllImport("__Internal")]
 	public static extern void _startServer();
-	[DllImport("__Internal")]
+    [DllImport("__Internal")]
+    public static extern string _getId();
+    [DllImport("__Internal")]
 	public static extern void _searchDevice();
     
 	[DllImport("__Internal")]

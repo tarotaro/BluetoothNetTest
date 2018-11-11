@@ -12,7 +12,9 @@ public class BluetoothController : MonoBehaviour
 	[SerializeField] private Text _dataLengthPerSecond;
 	[SerializeField] private Text _readTime;
 	[SerializeField] private Text _writeTime;
-	public float countdown = 5.0f;
+    [SerializeField] private Text _uuID;
+
+    public float countdown = 5.0f;
 	private float _timePerSecond = 0;
 	private int _alldataLength = 0;
     private int _prealldataLength = 0;
@@ -204,11 +206,13 @@ public class BluetoothController : MonoBehaviour
         {
             _isServerStart = true;
             _javaClass.CallStatic("startServer");
+            _uuID.text =_javaClass.CallStatic<String>("getUUIDForName");
         }
 #endif
 #if UNITY_IOS
         _isServerStart = true;
         BluetoothiOSInterface._startServer();
+        _uuID.text = BluetoothiOSInterface._getId();
 #endif
     }
 
