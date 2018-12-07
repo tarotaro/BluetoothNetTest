@@ -204,9 +204,14 @@ public class BluetoothController : MonoBehaviour
 	   }
 	   if (!_isServerStart)
         {
-            _isServerStart = true;
-            _javaClass.CallStatic("startServer");
-            _uuID.text =_javaClass.CallStatic<String>("getUUIDForName");
+            if (_javaClass.CallStatic<Boolean>("isAdvertiseSupported"))
+            {
+                _isServerStart = true;
+                _javaClass.CallStatic("startServer");
+                _uuID.text = _javaClass.CallStatic<String>("getUUIDForName");
+            }else{
+                _text.text = "Hostになれません";
+            }
         }
 #endif
 #if UNITY_IOS
