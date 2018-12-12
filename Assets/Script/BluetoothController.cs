@@ -12,6 +12,7 @@ public class BluetoothController : MonoBehaviour
 	[SerializeField] private Text _dataLengthPerSecond;
 	[SerializeField] private Text _readTime;
 	[SerializeField] private Text _writeTime;
+    [SerializeField] private Text _error;
     [SerializeField] private Text _uuID;
 
     public float countdown = 5.0f;
@@ -210,7 +211,7 @@ public class BluetoothController : MonoBehaviour
                 _javaClass.CallStatic("startServer");
                 _uuID.text = _javaClass.CallStatic<String>("getUUIDForName");
             }else{
-                _text.text = "Hostになれません";
+                _error.text = "Hostになれません";
             }
         }
 #endif
@@ -230,9 +231,9 @@ public class BluetoothController : MonoBehaviour
         Debug.Log("UnityEditorでは使用できません");
 #elif UNITY_ANDROID
         if(_javaClass == null){
-        _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");	        
-	        _javaClass.CallStatic("searchDevice");
+            _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");      
 	    }
+        _javaClass.CallStatic("searchDevice");
 #endif
     }
 
