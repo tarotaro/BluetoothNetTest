@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42554ed1-e464-4d59-be55-b4f7912e8a18" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Script/SerialBluetoothController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/SerialBluetoothController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BluetoothNetTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BluetoothNetTest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BluetoothNetTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BluetoothNetTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/btsocketlib.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/btsocketlib.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libbtsocketlib.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/libbtsocketlib.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/BluetoothController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BluetoothController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,46 +25,525 @@
       <file leaf-file-name="BluetoothController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1677">
-              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+            <state relative-caret-position="-3111">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
-                <marker date="1540027599650" expanded="true" signature="6:88" ph="..." />
-                <marker date="1540027599650" expanded="true" signature="138:6583" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="683:740" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="816:823" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="878:2612" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="1000:1051" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="1073:1356" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="1407:1429" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="1448:1691" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="1541:1683" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="1698:1717" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="2634:2977" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="2892:2926" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="3000:3891" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="3583:3620" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="3683:3881" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="3922:4278" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="4312:4660" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="4689:5118" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="5147:5361" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="5394:6344" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="6110:6126" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="6219:6296" ph="{...}" />
-                <marker date="1540027599650" expanded="true" signature="6374:6580" ph="{...}" />
+                <marker date="1545460111895" expanded="false" signature="6:88" ph="..." />
+                <marker date="1545460111895" expanded="true" signature="138:7057" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="824:881" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="957:964" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="1019:2753" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="1912:2743" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="2019:2074" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="2097:2430" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="2450:2735" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="2572:2730" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="2775:3118" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="2866:2900" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="3141:4032" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="3259:3305" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="3382:3607" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="4063:4754" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="4115:4211" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="4236:4590" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="4318:4517" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="4788:5136" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="5165:5592" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="5221:5362" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="5375:5436" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="5621:5835" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="5868:6818" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="6112:6143" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="6248:6325" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="6848:7054" ph="{...}" />
+                <marker date="1545460111895" expanded="true" signature="6904:6973" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BluetoothiOSInterface.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SerialBluetoothController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Script/SerialBluetoothController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+              <folding>
+                <marker date="1545482458676" expanded="true" signature="6:225" ph="..." />
+                <marker date="1545482458676" expanded="true" signature="243:6252" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="295:6250" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="882:1008" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1069:1125" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1168:1342" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1390:1621" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1658:2409" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1693:2399" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1749:2334" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="1935:2037" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="2078:2176" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="2217:2315" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="2444:2676" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="2753:2966" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3036:3416" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3111:3405" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3208:3355" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3263:3337" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3448:3493" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3529:3702" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3782:3832" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="3876:4544" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="4188:4426" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="4593:5041" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="4698:4885" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="4767:4871" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="4918:5018" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5093:5193" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5241:5381" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5293:5371" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5429:5695" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5483:5541" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5584:5659" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5730:5772" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5808:5850" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5888:5939" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="5973:6244" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="6020:6085" ph="{...}" />
+                <marker date="1545482458676" expanded="true" signature="6123:6188" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonHelper.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Script/JsonHelper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1536846391000" expanded="false" signature="6:58" ph="..." />
+                <marker date="1536846391000" expanded="true" signature="90:355" ph="{...}" />
+                <marker date="1536846391000" expanded="true" signature="139:264" ph="{...}" />
+                <marker date="1536846391000" expanded="true" signature="313:353" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BluetoothiOSInterface.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothiOSInterface.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="285">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
               <folding>
-                <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-                <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+                <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+                <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerClient.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+              <folding>
+                <marker date="1523255747000" expanded="true" signature="6:131" ph="..." />
+                <marker date="1523255747000" expanded="true" signature="174:4773" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="518:775" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="880:1141" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="1048:1138" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="1196:1648" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="1230:1438" ph="/* Assign the 'Coroutine' that will handle your reading Functionality, this will improve your code style ... */" />
+                <marker date="1523255747000" expanded="true" signature="1740:2337" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="1816:1983" ph="/* We didn't use this when connecting to Bluetooth modules ... */" />
+                <marker date="1523255747000" expanded="true" signature="2017:2225" ph="/* Assign the 'Coroutine' that will handle your reading Functionality, this will improve your code style ... */" />
+                <marker date="1523255747000" expanded="true" signature="2437:2572" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="2658:2714" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="2684:2711" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="2803:2851" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="2874:3046" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="2945:3043" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="3075:3588" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="3211:3545" ph="/* start a server for 100 second, and close after the first connection attempt by a device that has the same UUID ... */" />
+                <marker date="1523255747000" expanded="true" signature="3700:4496" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="3703:3760" ph="/* Manage Reading Coroutine ... */" />
+                <marker date="1523255747000" expanded="true" signature="3852:4383" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="3912:4356" ph="{...}" />
+                <marker date="1523255747000" expanded="true" signature="3919:4110" ph="/* Send and read in this library use bytes. So you have to choose your own encoding. ... */" />
+                <marker date="1523255747000" expanded="true" signature="4579:4769" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScrollTerminalUI.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/ScrollTerminalUI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-674">
+              <folding>
+                <marker date="1523255746000" expanded="false" signature="6:119" ph="..." />
+                <marker date="1523255746000" expanded="true" signature="166:2000" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="415:526" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="528:762" ph="/* We will add functionality to aloow automatic scrolling, in next release ... */" />
+                <marker date="1523255746000" expanded="true" signature="794:821" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="876:959" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="1010:1998" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="1239:1365" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="1635:1770" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="1843:1885" ph="{...}" />
+                <marker date="1523255746000" expanded="true" signature="1919:1954" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerminalController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Bluetooth Terminal/TerminalController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1202">
+              <folding>
+                <marker date="1523255748000" expanded="false" signature="6:131" ph="..." />
+                <marker date="1523255748000" expanded="true" signature="180:4063" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="476:729" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="777:1043" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="950:1039" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="1134:1683" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="1325:1572" ph="/* Here we assign the 'Coroutine' that will handle your reading Functionality, this will improve your code style ... */" />
+                <marker date="1523255748000" expanded="true" signature="1782:1914" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2006:2103" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2032:2100" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2198:2246" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2268:2484" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2339:2481" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2497:2691" ph="/* ############################## Reading Data  ########################################## ... */" />
+                <marker date="1523255748000" expanded="true" signature="2747:3860" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2750:2807" ph="/* Manage Reading Coroutine ... */" />
+                <marker date="1523255748000" expanded="true" signature="2904:3747" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="2963:3721" ph="{...}" />
+                <marker date="1523255748000" expanded="true" signature="3333:3715" ph="/* Note: You should notice the possiblity that at the time of calling read() a whole line has not yet completly r ... */" />
+                <marker date="1523255748000" expanded="true" signature="3941:4060" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BluetoothAdapter.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/BluetoothAdapter.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4341">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+              <folding>
+                <marker date="1523255743000" expanded="true" signature="1:188" ph="/* Use of this asset and source code is governed by the ASSET STORE TERMS OF SERVICE AND EULA license ... */" />
+                <marker date="1523255743000" expanded="false" signature="195:309" ph="..." />
+                <marker date="1523255743000" expanded="true" signature="342:23504" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="347:686" ph="/// Represents the local device %Bluetooth adapter. ... " />
+                <marker date="1523255743000" expanded="true" signature="400:686" ph="/* This class has all the general actions that aren't just specific to the remote device you are connecting to, ... */" />
+                <marker date="1523255743000" expanded="true" signature="733:23501" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="1011:1125" ph="/// Occurs when a BluetoothDevice instance get connected, and pass its reference. ... " />
+                <marker date="1523255743000" expanded="true" signature="1195:1312" ph="/// Occurs when a BluetoothDevice instance get disconnected, and pass its reference. ... " />
+                <marker date="1523255743000" expanded="true" signature="1377:1512" ph="/// Occurs when a BluetoothDevice instance can't be found as a near by Device, and pass its reference. ... " />
+                <marker date="1523255743000" expanded="true" signature="1580:1723" ph="/// Occurs when a BluetoothDevice instance has been found but failed to connect to it, and pass its reference. ... " />
+                <marker date="1523255743000" expanded="true" signature="1786:1948" ph="/// Occurs when a BluetoothDevice instance has been found but failed to connect to it, and pass its reference wit ... " />
+                <marker date="1523255743000" expanded="true" signature="2024:2147" ph="/// Occurs when on sending error. Passes the BluetoothDevice reference that has the error. ... " />
+                <marker date="1523255743000" expanded="true" signature="2212:2335" ph="/// Occurs when on reading error. Passes the BluetoothDevice reference that has the error. ... " />
+                <marker date="1523255743000" expanded="true" signature="2400:2683" ph="/// Occurs when on a device picked by user from the default Android %Bluetooth devices list. ... " />
+                <marker date="1523255743000" expanded="true" signature="2748:3137" ph="/// Occurs when a client remote device request to connect to your server. ... " />
+                <marker date="1523255743000" expanded="true" signature="3204:3680" ph="/// Occurs when the BluetoothAdapter listening to other devices is finished. ... " />
+                <marker date="1523255743000" expanded="true" signature="3749:3872" ph="/// Occurs when on reading starts for a BluetoothDevice insance and Passes its reference. ... " />
+                <marker date="1523255743000" expanded="true" signature="3939:4061" ph="/// Occurs when on reading stops for a BluetoothDevice insance and Passes its reference. ... " />
+                <marker date="1523255743000" expanded="true" signature="4127:4422" ph="/// Occurs when this Android device changes its Bluetoth Adapter state to &lt;c&gt;ON&lt;/c&gt;. ... " />
+                <marker date="1523255743000" expanded="true" signature="4469:4765" ph="/// Occurs when this Android device changes its Bluetoth Adapter state to &lt;c&gt;OFF&lt;/c&gt;. ... " />
+                <marker date="1523255743000" expanded="true" signature="4814:5191" ph="/// Occurs when this Android device changes its Bluetoth Adapter state. ... " />
+                <marker date="1523255743000" expanded="true" signature="5255:5462" ph="/// Occurs when a nearby device has been discovered after calling startDiscovery() . ... " />
+                <marker date="1523255743000" expanded="true" signature="5537:5699" ph="/// Occurs when Discovery has finished. ... " />
+                <marker date="1523255743000" expanded="true" signature="5767:6214" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="5812:6042" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="6218:6394" ph="/* Called by BtBridge constructor which is a singlton started after attempting to use the library ... */" />
+                <marker date="1523255743000" expanded="true" signature="6442:6684" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="6481:6499" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="6783:6853" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="6984:7061" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="7065:7293" ph="/// Display the default Android %Bluetooth devices list.  ... " />
+                <marker date="1523255743000" expanded="true" signature="7329:7374" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="7377:7532" ph="/// the %Bluetooth adapter state. ... " />
+                <marker date="1523255743000" expanded="true" signature="7575:7634" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="7637:7830" ph="/// Force Enabling the bluetooth, without asking the user. ... " />
+                <marker date="1523255743000" expanded="true" signature="7870:7926" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="7930:8097" ph="/// Disables the bluetooth. ... " />
+                <marker date="1523255743000" expanded="true" signature="8138:8195" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="8198:8380" ph="/// Asks the user to enable bluetooth. ... " />
+                <marker date="1523255743000" expanded="true" signature="8423:8475" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="8478:9014" ph="/// Starts the server. ... " />
+                <marker date="1523255743000" expanded="true" signature="9061:9121" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="9124:9715" ph="/// Starts the server. ... " />
+                <marker date="1523255743000" expanded="true" signature="9772:9833" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="9836:10610" ph="/// Starts the server. ... " />
+                <marker date="1523255743000" expanded="true" signature="10690:10763" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="10767:11059" ph="/// Listens the state of the %Bluetooth adapter of this device. ... " />
+                <marker date="1523255743000" expanded="true" signature="11106:11161" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="11164:11479" ph="/// Stop listening to the state of the %Bluetooth adapter of this device. ... " />
+                <marker date="1523255743000" expanded="true" signature="11530:11587" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="11593:11993" ph="/* Old method ... */" />
+                <marker date="1523255743000" expanded="true" signature="11997:12166" ph="/// Returns array of paired/bonded devices. ... " />
+                <marker date="1523255743000" expanded="true" signature="12220:12676" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="12462:12653" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="12679:13367" ph="/* The following commented getPairedDevices doesn't allow dublicate instances of the same device ... */" />
+                <marker date="1523255743000" expanded="true" signature="13372:13620" ph="/// Start Discovery for nearby devices, get those discovered devices by listening to the event &lt;see cref=&quot;OnDevic ... " />
+                <marker date="1523255743000" expanded="true" signature="13659:13714" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="13718:14068" ph="///  ... " />
+                <marker date="1523255743000" expanded="true" signature="14109:14166" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="14170:14274" ph="/// Releases any resources that have been allocated by startDiscovery() ... " />
+                <marker date="1523255743000" expanded="true" signature="14324:14383" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="14387:14514" ph="/// Cancel Discovery ... " />
+                <marker date="1523255743000" expanded="true" signature="14554:14610" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="14613:14782" ph="/// Simply it makes the Android device discoverable. If you want other devices to connect to your device, use sta ... " />
+                <marker date="1523255743000" expanded="true" signature="14831:14885" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="14889:15020" ph="/// Release all resouces related to this library. Of course, results in disconnecting all devices. ... " />
+                <marker date="1523255743000" expanded="true" signature="15063:15226" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15268:15793" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15330:15348" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15498:15789" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15528:15779" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15596:15635" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15705:15773" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15832:16238" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="15895:15913" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16057:16232" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16088:16227" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16152:16188" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16284:16583" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16346:16364" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16462:16579" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16498:16537" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16683:17296" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="16857:16957" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17052:17070" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17168:17292" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17205:17248" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17338:17622" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17400:17418" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17516:17618" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17547:17581" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17666:17964" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17728:17746" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17844:17960" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="17878:17920" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18008:18301" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18070:18088" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18186:18297" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18220:18257" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18344:18569" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18406:18424" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18524:18565" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18610:18828" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18673:18691" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18877:19205" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="18939:18957" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19055:19201" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19120:19158" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19249:19806" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19311:19329" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19452:19802" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19517:19556" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19664:19797" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19853:19884" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19925:20606" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="19961:20602" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="20139:20370" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="20324:20364" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="20660:20704" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="20759:20945" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="20806:20941" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="20992:21867" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="21032:21862" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="21210:21441" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="21395:21435" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="21621:21669" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="21914:21987" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22029:22169" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22210:22347" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22383:22791" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22419:22787" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22725:22782" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22840:23252" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="22877:23248" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="23203:23243" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="23274:23358" ph="{...}" />
+                <marker date="1523255743000" expanded="true" signature="23414:23498" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BtDiscovery.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Devices Discovery/BtDiscovery.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="72" />
+              <folding>
+                <marker date="1523255751000" expanded="true" signature="6:162" ph="..." />
+                <marker date="1523255751000" expanded="true" signature="204:3036" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="338:530" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="476:527" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="548:735" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="801:1632" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="807:1020" ph="/* Remember : dev != any other devices even if they're targeting the same device(because they're a connection con ... */" />
+                <marker date="1523255751000" expanded="true" signature="1108:1293" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="1703:2343" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="1753:1829" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="2376:2517" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="2549:2940" ph="{...}" />
+                <marker date="1523255751000" expanded="true" signature="2607:2896" ph="/* Since we need a refresh button behaviour. We will cancel any ongoind discovery to start again. like refresh be ... */" />
+                <marker date="1523255751000" expanded="true" signature="2960:3033" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BluetoothDevice.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/BluetoothDevice.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="783" column="36" selection-start-line="783" selection-start-column="36" selection-end-line="783" selection-end-column="36" />
+              <folding>
+                <marker date="1523255749000" expanded="true" signature="0:187" ph="/* Use of this asset and source code is governed by the ASSET STORE TERMS OF SERVICE AND EULA license ... */" />
+                <marker date="1523255749000" expanded="false" signature="194:308" ph="..." />
+                <marker date="1523255749000" expanded="true" signature="342:33011" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="346:561" ph="/// Represents a remote %Bluetooth device. ... " />
+                <marker date="1523255749000" expanded="true" signature="390:561" ph="/* A BluetoothDevice lets you create a connection with the respective ... */" />
+                <marker date="1523255749000" expanded="true" signature="604:33009" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="610:727" ph="/// Occurs when this BluetoothDevice instance get connected, and pass its reference. ... " />
+                <marker date="1523255749000" expanded="true" signature="784:904" ph="/// Occurs when this BluetoothDevice instance get disconnected, and pass its reference. ... " />
+                <marker date="1523255749000" expanded="true" signature="963:1101" ph="/// Occurs when this BluetoothDevice instance can't be found as a near by Device, and pass its reference. ... " />
+                <marker date="1523255749000" expanded="true" signature="1163:1309" ph="/// Occurs when this BluetoothDevice instance has been found but failed to connect to it, and pass its reference. ... " />
+                <marker date="1523255749000" expanded="true" signature="1366:1530" ph="/// Occurs when this BluetoothDevice instance failed to connect, passes error message. Can replace OnDeviceOFF an ... " />
+                <marker date="1523255749000" expanded="true" signature="1601:1725" ph="/// Occurs when on sending error. Passes this BluetoothDevice reference that has the error. ... " />
+                <marker date="1523255749000" expanded="true" signature="1784:1908" ph="/// Occurs when on reading error. Passes this BluetoothDevice reference that has the error. ... " />
+                <marker date="1523255749000" expanded="true" signature="1967:2093" ph="/// Occurs when on reading starts for this BluetoothDevice insance and Passes its reference. ... " />
+                <marker date="1523255749000" expanded="true" signature="2154:2279" ph="/// Occurs when on reading stops for this BluetoothDevice insance and Passes its reference. ... " />
+                <marker date="1523255749000" expanded="true" signature="2373:2443" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="2483:2559" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="2601:2681" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="2718:2788" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="2840:2922" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="2962:3038" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="3078:3154" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="3196:3276" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="3317:3395" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="3426:3496" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="4761:4839" ph="/// Initializes a new instance of this class. ... " />
+                <marker date="1523255749000" expanded="true" signature="4867:4938" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="5030:5408" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="5196:5387" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="5529:5604" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="5694:5846" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="5882:6202" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6279:6394" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6320:6354" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6457:6552" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6498:6532" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6590:6769" ph="/// Gets a value indicating whether this device is reading. ... " />
+                <marker date="1523255749000" expanded="true" signature="6794:6874" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6803:6831" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="6918:7509" ph="/// Gets a value indicating whether this device has data available to read.(It has one frame delay). ... " />
+                <marker date="1523255749000" expanded="true" signature="7540:7642" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="7549:7585" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="7602:7637" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="7682:7863" ph="/// Gets a value indicating whether this device is connected. ... " />
+                <marker date="1523255749000" expanded="true" signature="7890:7963" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="8029:8568" ph="/// If it's not &lt;c&gt;Null&lt;/c&gt; then the referenced &lt;c&gt;IEnumerator&lt;/c&gt; will be started directly after a reading start ... " />
+                <marker date="1523255749000" expanded="true" signature="8631:8714" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="8890:9012" ph="/// Will stop the ongoing reading couroutine, referenced by &lt;see cref=&quot;ReadingCoroutine&quot;&gt; ... " />
+                <marker date="1523255749000" expanded="true" signature="9051:9229" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="9334:9917" ph="/// Read all available &lt;c&gt;bytes&lt;/c&gt;, or read the next available packet if packetization was used. ... " />
+                <marker date="1523255749000" expanded="true" signature="9941:10317" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="9971:10297" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="10029:10178" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="10321:11099" ph="/// Read from available &lt;c&gt;bytes&lt;/c&gt; up to a max &lt;c&gt;size&lt;/c&gt; number of bytes, or read all &lt;c&gt;bytes&lt;/c&gt; _Regarding ... " />
+                <marker date="1523255749000" expanded="true" signature="11131:11247" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="11161:11227" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="11252:11835" ph="/// Read all available &lt;c&gt;bytes&lt;/c&gt;, or read the next available packet if packetization was used. ... " />
+                <marker date="1523255749000" expanded="true" signature="11872:12159" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="11951:12138" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="12093:12133" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="12163:12709" ph="/// Get the UUIDs used by this device instance except a BluetoothDevice initialized by Name before connecting. ... " />
+                <marker date="1523255749000" expanded="true" signature="12740:12849" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="12768:12829" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="12891:13014" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="12919:12992" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="13024:13658" ph="/// Packetize data into packets of a &lt;c&gt;size&lt;/c&gt; number of bytes per each. ... " />
+                <marker date="1523255749000" expanded="true" signature="13697:13836" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="13727:13832" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="13839:14691" ph="/// Packetize data into packets, each packets ends with the byte &lt;c&gt;byt&lt;/c&gt;. ... " />
+                <marker date="1523255749000" expanded="true" signature="14727:14865" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="14757:14860" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="14869:15252" ph="/// Sets the underlying buffer size, and stops it from changing size dynamically. This will save resources. ... " />
+                <marker date="1523255749000" expanded="true" signature="15291:15383" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="15321:15378" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="15451:16005" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="15503:16000" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="15535:15744" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="15767:15824" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="16056:16135" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="16303:16406" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="16312:16352" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="16360:16402" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="16475:17130" ph="/// Gets or sets the name of this device. ... " />
+                <marker date="1523255749000" expanded="true" signature="17154:17569" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="17163:17328" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="17208:17301" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="17336:17565" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="17364:17391" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="17642:17836" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="17910:18578" ph="/// Gets or sets the mac address of this device. ... " />
+                <marker date="1523255749000" expanded="true" signature="18607:18971" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="18616:18785" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="18660:18757" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="18793:18967" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="19003:19710" ph="/// Gets or sets the UUI. ... " />
+                <marker date="1523255749000" expanded="true" signature="19732:19853" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="19741:19764" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="19772:19849" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="19890:20186" ph="/// Gets or sets a value indicating whether this device will read. ... " />
+                <marker date="1523255749000" expanded="true" signature="20210:20325" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="20219:20251" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="20259:20321" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="20365:20937" ph="/// Gets and Sets the reading thread/process ID number of this device instance. ... " />
+                <marker date="1523255749000" expanded="true" signature="20960:21086" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="20969:20996" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="21004:21082" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="21089:22322" ph="/// &lt;summary&gt; ... " />
+                <marker date="1523255749000" expanded="true" signature="22382:22509" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="22512:22589" ph="/// Equivalent to connect(10, 1000, false) . ... " />
+                <marker date="1523255749000" expanded="true" signature="22615:22652" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="22656:22737" ph="///  Equivalent to connect(tries, 1000, false) . ... " />
+                <marker date="1523255749000" expanded="true" signature="22775:22999" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="22785:22958" ph="/* after closing ConnectionMode isn't right most of the time. ... */" />
+                <marker date="1523255749000" expanded="true" signature="23003:23086" ph="/// Equivalent to connect(attempts, time, false) . ... " />
+                <marker date="1523255749000" expanded="true" signature="23133:23176" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="23181:24984" ph="/// Connect to this device. ... " />
+                <marker date="1523255749000" expanded="true" signature="25052:25120" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="25125:28183" ph="/// Connect to this device. ... " />
+                <marker date="1523255749000" expanded="true" signature="28313:28498" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="28523:28599" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="28553:28595" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="28604:29480" ph="/// Sends a &lt;c&gt;byte[]&lt;c/&gt; array to this device. ... " />
+                <marker date="1523255749000" expanded="true" signature="29512:29638" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="29562:29585" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="29642:29890" ph="/// Similar to send(byte[]) , but it's a synchronouse/blocking method. send(byte[]) will raise exception if it wa ... " />
+                <marker date="1523255749000" expanded="true" signature="29931:30111" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="29962:29991" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="30115:31545" ph="/* TODO this method check if this instance represent the same physical device ... */" />
+                <marker date="1523255749000" expanded="true" signature="31596:31706" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="31793:31851" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="31896:32157" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="31997:32109" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="32208:32897" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="32231:32893" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="32252:32518" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="32563:32665" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="32705:32786" ph="{...}" />
+                <marker date="1523255749000" expanded="true" signature="32791:32867" ph="/* Free your own state (unmanaged objects). ... */" />
+                <marker date="1523255749000" expanded="true" signature="32943:33006" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -69,6 +555,9 @@
     <findStrings>
       <find>isServerStart</find>
       <find>frame</find>
+      <find>ScrollTerminalUI</find>
+      <find>dataToSend</find>
+      <find>+=</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,14 +565,28 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/BluetoothiOSInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Bluetooth Terminal/TerminalController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/BluetoothDevice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/ScrollTerminalUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/SerialBluetoothController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/BluetoothAdapter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Devices Discovery/BtDiscovery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@3.0.0-preview/CoreRP/Debugging/DebugUpdater.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/JsonHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Basic Demo/BasicDemo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/CoreLibrary/BtBridge.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Automatic Connection/AutoConnect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Assets/Script/BluetoothiOSInterface.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/BluetoothController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/SerialBluetoothController.cs" />
       </list>
     </option>
   </component>
@@ -94,16 +597,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="260" />
-    <option name="y" value="247" />
+    <option name="x" value="431" />
+    <option name="y" value="333" />
     <option name="width" value="1920" />
     <option name="height" value="1008" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -116,13 +620,120 @@
               <item name="BluetoothNetTest" type="483dac07:UnityExplorerNode$Root" />
               <item name="" type="1045f7f1:UnityExplorerNode" />
             </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest" type="483dac07:UnityExplorerNode$Root" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Arduino_Basic_Test" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Demos" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Demos" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Android2Android" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Demos" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Automatic Connection" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Demos" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Basic Demo" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Demos" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Bluetooth Terminal" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Demos" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Devices Discovery" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BT_Library" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BluetoothNetTest (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Script" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
@@ -173,11 +784,12 @@
       <workItem from="1539532092026" duration="2517000" />
       <workItem from="1539699121479" duration="200000" />
       <workItem from="1539783525933" duration="7690000" />
+      <workItem from="1545455953182" duration="18400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36950000" />
+    <option name="totallyTimeSpent" value="55350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -189,7 +801,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="247" width="1920" height="1008" extended-state="0" />
+    <frame x="431" y="333" width="1920" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -199,12 +811,12 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28700745" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32930845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29020235" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" order="8" />
+      <window_info anchor="bottom" id="Unity" order="8" weight="0.32930845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956093" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39956093" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -229,51 +841,144 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs</url>
-          <line>278</line>
+          <line>289</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Script/BluetoothController.cs" initialLine="229">
             <startOffsets>
-              <startOffset value="5913" />
+              <startOffset value="6354" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="5978" />
+              <endOffset value="6419" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs</url>
+          <line>55</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs" initialLine="55">
+            <startOffsets>
+              <startOffset value="1749" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1809" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs</url>
+          <line>76</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs" initialLine="76">
+            <startOffsets>
+              <startOffset value="2446" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2569" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/BT_Library/Scripts/CoreLibrary/BtBridge.cs</url>
+          <line>302</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/BT_Library/Scripts/CoreLibrary/BtBridge.cs" initialLine="302">
+            <startOffsets>
+              <startOffset value="7145" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="7162" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding>
+            <marker date="1545460111895" expanded="false" signature="6:88" ph="..." />
+            <marker date="1545460111895" expanded="true" signature="138:7057" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="824:881" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="957:964" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="1019:2753" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="1912:2743" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2019:2074" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2097:2430" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2450:2735" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2572:2730" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2775:3118" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2866:2900" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3141:4032" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3259:3305" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3382:3607" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4063:4754" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4115:4211" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4236:4590" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4318:4517" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4788:5136" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5165:5592" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5221:5362" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5375:5436" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5621:5835" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5868:6818" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6112:6143" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6248:6325" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6848:7054" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6904:6973" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothiOSInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2520">
           <caret line="168" column="37" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
           <folding>
-            <marker date="1540027599650" expanded="true" signature="6:88" ph="..." />
-            <marker date="1540027599650" expanded="true" signature="138:6583" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="683:740" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="816:823" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="878:2612" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1000:1051" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1073:1356" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1407:1429" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1448:1691" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1541:1683" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1698:1717" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="2634:2977" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="2892:2926" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3000:3891" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3583:3620" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3683:3881" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3922:4278" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="4312:4660" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="4689:5118" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="5147:5361" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="5394:6344" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="6110:6126" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="6219:6296" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="6374:6580" ph="{...}" />
+            <marker date="1545460111895" expanded="false" signature="6:88" ph="..." />
+            <marker date="1545460111895" expanded="true" signature="138:7057" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="824:881" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="957:964" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="1019:2753" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="1912:2743" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2019:2074" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2097:2430" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2450:2735" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2572:2730" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2775:3118" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2866:2900" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3141:4032" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3259:3305" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3382:3607" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4063:4754" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4115:4211" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4236:4590" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4318:4517" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4788:5136" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5165:5592" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5221:5362" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5375:5436" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5621:5835" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5868:6818" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6112:6143" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6248:6325" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6848:7054" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6904:6973" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -283,8 +988,8 @@
         <state relative-caret-position="240">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-            <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -294,8 +999,8 @@
         <state relative-caret-position="240">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-            <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -319,8 +1024,8 @@
         <state relative-caret-position="240">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-            <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -337,8 +1042,8 @@
         <state relative-caret-position="240">
           <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-            <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -355,8 +1060,8 @@
         <state relative-caret-position="45">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="34" />
           <folding>
-            <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-            <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -424,53 +1129,641 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Basic Demo/BasicDemo.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        <state>
+          <folding>
+            <marker date="1523255747000" expanded="false" signature="6:97" ph="..." />
+            <marker date="1523255747000" expanded="true" signature="138:3727" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="247:2002" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="355:1161" ph="/* We need to identefy the device either by its MAC Adress or Name (NOT BOTH! it will use only one of them to ide ... */" />
+            <marker date="1523255747000" expanded="true" signature="1237:1546" ph="/* Note: The library will fill the properties device.Name and device.MacAdress with the right data after succesfu ... */" />
+            <marker date="1523255747000" expanded="true" signature="1551:1699" ph="/* You might need th following: ... */" />
+            <marker date="1523255747000" expanded="true" signature="1702:1999" ph="/* Quoting docs: A uuid is a Universally Unique Identifier (UUID) standardized 128-bit format for a string ID use ... */" />
+            <marker date="1523255747000" expanded="true" signature="2028:2585" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2069:2561" ph="/* Notice that there're more than one connect() method, check out the docs to read about them. ... */" />
+            <marker date="1523255747000" expanded="true" signature="2613:2635" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2662:3063" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2686:3060" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2691:2990" ph="/* Send and Read works only with bytes. You need to convert everything to bytes. ... */" />
+            <marker date="1523255747000" expanded="true" signature="3122:3299" ph="/* Please note that this way of reading is only used in this demo. All other demos use Coroutines(Unity offers ma ... */" />
+            <marker date="1523255747000" expanded="true" signature="3315:3725" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3341:3722" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3400:3717" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3407:3598" ph="/* Send and read in this library use bytes. So you have to choose your own encoding. ... */" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Basic Demo/ReadMe.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ReadMe.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@3.0.0-preview/CoreRP/Debugging/DebugUpdater.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1677">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        <state relative-caret-position="240">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Automatic Connection/AutoConnect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-392">
           <folding>
-            <marker date="1540027599650" expanded="true" signature="6:88" ph="..." />
-            <marker date="1540027599650" expanded="true" signature="138:6583" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="683:740" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="816:823" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="878:2612" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1000:1051" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1073:1356" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1407:1429" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1448:1691" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1541:1683" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="1698:1717" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="2634:2977" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="2892:2926" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3000:3891" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3583:3620" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3683:3881" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="3922:4278" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="4312:4660" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="4689:5118" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="5147:5361" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="5394:6344" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="6110:6126" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="6219:6296" ph="{...}" />
-            <marker date="1540027599650" expanded="true" signature="6374:6580" ph="{...}" />
+            <marker date="1523255757000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1523255757000" expanded="true" signature="173:4063" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="251:829" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="337:357" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="845:1175" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="1201:2114" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="1263:1418" ph="/* The Property device.MacAdress doesn't require pairing. ... */" />
+            <marker date="1523255757000" expanded="true" signature="1467:1891" ph="/* device.Name = &quot;My_Device&quot;; ... */" />
+            <marker date="1523255757000" expanded="true" signature="1895:1988" ph="/* The ManageConnection Coroutine will start when the device is ready for reading. ... */" />
+            <marker date="1523255757000" expanded="true" signature="2231:2443" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="2254:2440" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="2585:2868" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="2629:2719" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="2769:2865" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3018:3197" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3062:3193" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3226:3274" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3278:3455" ph="/* ############################## Reading Data  ########################################## ... */" />
+            <marker date="1523255757000" expanded="true" signature="3511:3851" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3596:3802" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3652:3776" ph="{...}" />
+            <marker date="1523255757000" expanded="true" signature="3934:4059" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Arduino_Basic_Test/Read me.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/CoreLibrary/BtBridge.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="165" column="20" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="20" />
+          <folding>
+            <marker date="1523255751000" expanded="true" signature="0:187" ph="/* Use of this asset and source code is governed by the ASSET STORE TERMS OF SERVICE AND EULA license ... */" />
+            <marker date="1523255751000" expanded="true" signature="272:7861" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="300:7859" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="2248:2979" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3015:3311" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3024:3307" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3053:3281" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3196:3275" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3376:3733" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3757:3830" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3863:3894" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="3969:4068" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="4146:4247" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="4308:4425" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="4475:4583" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="4691:4788" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="4862:4961" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="4990:5056" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5093:5163" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5197:5282" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5317:5403" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5440:5529" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5582:5692" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5725:5816" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5856:5938" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="5980:6065" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="6129:6241" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="6352:6473" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="6506:6598" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="6633:6727" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="6761:6854" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="6898:6983" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7026:7107" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7137:7207" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7211:7354" ph="/* TEST ... */" />
+            <marker date="1523255751000" expanded="true" signature="7472:7736" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7499:7532" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7541:7597" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7564:7592" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7621:7628" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7752:7855" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7764:7820" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7787:7815" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="7844:7851" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/BluetoothAdapter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4341">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <marker date="1523255743000" expanded="true" signature="1:188" ph="/* Use of this asset and source code is governed by the ASSET STORE TERMS OF SERVICE AND EULA license ... */" />
+            <marker date="1523255743000" expanded="false" signature="195:309" ph="..." />
+            <marker date="1523255743000" expanded="true" signature="342:23504" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="347:686" ph="/// Represents the local device %Bluetooth adapter. ... " />
+            <marker date="1523255743000" expanded="true" signature="400:686" ph="/* This class has all the general actions that aren't just specific to the remote device you are connecting to, ... */" />
+            <marker date="1523255743000" expanded="true" signature="733:23501" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="1011:1125" ph="/// Occurs when a BluetoothDevice instance get connected, and pass its reference. ... " />
+            <marker date="1523255743000" expanded="true" signature="1195:1312" ph="/// Occurs when a BluetoothDevice instance get disconnected, and pass its reference. ... " />
+            <marker date="1523255743000" expanded="true" signature="1377:1512" ph="/// Occurs when a BluetoothDevice instance can't be found as a near by Device, and pass its reference. ... " />
+            <marker date="1523255743000" expanded="true" signature="1580:1723" ph="/// Occurs when a BluetoothDevice instance has been found but failed to connect to it, and pass its reference. ... " />
+            <marker date="1523255743000" expanded="true" signature="1786:1948" ph="/// Occurs when a BluetoothDevice instance has been found but failed to connect to it, and pass its reference wit ... " />
+            <marker date="1523255743000" expanded="true" signature="2024:2147" ph="/// Occurs when on sending error. Passes the BluetoothDevice reference that has the error. ... " />
+            <marker date="1523255743000" expanded="true" signature="2212:2335" ph="/// Occurs when on reading error. Passes the BluetoothDevice reference that has the error. ... " />
+            <marker date="1523255743000" expanded="true" signature="2400:2683" ph="/// Occurs when on a device picked by user from the default Android %Bluetooth devices list. ... " />
+            <marker date="1523255743000" expanded="true" signature="2748:3137" ph="/// Occurs when a client remote device request to connect to your server. ... " />
+            <marker date="1523255743000" expanded="true" signature="3204:3680" ph="/// Occurs when the BluetoothAdapter listening to other devices is finished. ... " />
+            <marker date="1523255743000" expanded="true" signature="3749:3872" ph="/// Occurs when on reading starts for a BluetoothDevice insance and Passes its reference. ... " />
+            <marker date="1523255743000" expanded="true" signature="3939:4061" ph="/// Occurs when on reading stops for a BluetoothDevice insance and Passes its reference. ... " />
+            <marker date="1523255743000" expanded="true" signature="4127:4422" ph="/// Occurs when this Android device changes its Bluetoth Adapter state to &lt;c&gt;ON&lt;/c&gt;. ... " />
+            <marker date="1523255743000" expanded="true" signature="4469:4765" ph="/// Occurs when this Android device changes its Bluetoth Adapter state to &lt;c&gt;OFF&lt;/c&gt;. ... " />
+            <marker date="1523255743000" expanded="true" signature="4814:5191" ph="/// Occurs when this Android device changes its Bluetoth Adapter state. ... " />
+            <marker date="1523255743000" expanded="true" signature="5255:5462" ph="/// Occurs when a nearby device has been discovered after calling startDiscovery() . ... " />
+            <marker date="1523255743000" expanded="true" signature="5537:5699" ph="/// Occurs when Discovery has finished. ... " />
+            <marker date="1523255743000" expanded="true" signature="5767:6214" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="5812:6042" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="6218:6394" ph="/* Called by BtBridge constructor which is a singlton started after attempting to use the library ... */" />
+            <marker date="1523255743000" expanded="true" signature="6442:6684" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="6481:6499" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="6783:6853" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="6984:7061" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="7065:7293" ph="/// Display the default Android %Bluetooth devices list.  ... " />
+            <marker date="1523255743000" expanded="true" signature="7329:7374" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="7377:7532" ph="/// the %Bluetooth adapter state. ... " />
+            <marker date="1523255743000" expanded="true" signature="7575:7634" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="7637:7830" ph="/// Force Enabling the bluetooth, without asking the user. ... " />
+            <marker date="1523255743000" expanded="true" signature="7870:7926" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="7930:8097" ph="/// Disables the bluetooth. ... " />
+            <marker date="1523255743000" expanded="true" signature="8138:8195" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="8198:8380" ph="/// Asks the user to enable bluetooth. ... " />
+            <marker date="1523255743000" expanded="true" signature="8423:8475" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="8478:9014" ph="/// Starts the server. ... " />
+            <marker date="1523255743000" expanded="true" signature="9061:9121" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="9124:9715" ph="/// Starts the server. ... " />
+            <marker date="1523255743000" expanded="true" signature="9772:9833" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="9836:10610" ph="/// Starts the server. ... " />
+            <marker date="1523255743000" expanded="true" signature="10690:10763" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="10767:11059" ph="/// Listens the state of the %Bluetooth adapter of this device. ... " />
+            <marker date="1523255743000" expanded="true" signature="11106:11161" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="11164:11479" ph="/// Stop listening to the state of the %Bluetooth adapter of this device. ... " />
+            <marker date="1523255743000" expanded="true" signature="11530:11587" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="11593:11993" ph="/* Old method ... */" />
+            <marker date="1523255743000" expanded="true" signature="11997:12166" ph="/// Returns array of paired/bonded devices. ... " />
+            <marker date="1523255743000" expanded="true" signature="12220:12676" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="12462:12653" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="12679:13367" ph="/* The following commented getPairedDevices doesn't allow dublicate instances of the same device ... */" />
+            <marker date="1523255743000" expanded="true" signature="13372:13620" ph="/// Start Discovery for nearby devices, get those discovered devices by listening to the event &lt;see cref=&quot;OnDevic ... " />
+            <marker date="1523255743000" expanded="true" signature="13659:13714" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="13718:14068" ph="///  ... " />
+            <marker date="1523255743000" expanded="true" signature="14109:14166" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="14170:14274" ph="/// Releases any resources that have been allocated by startDiscovery() ... " />
+            <marker date="1523255743000" expanded="true" signature="14324:14383" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="14387:14514" ph="/// Cancel Discovery ... " />
+            <marker date="1523255743000" expanded="true" signature="14554:14610" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="14613:14782" ph="/// Simply it makes the Android device discoverable. If you want other devices to connect to your device, use sta ... " />
+            <marker date="1523255743000" expanded="true" signature="14831:14885" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="14889:15020" ph="/// Release all resouces related to this library. Of course, results in disconnecting all devices. ... " />
+            <marker date="1523255743000" expanded="true" signature="15063:15226" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15268:15793" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15330:15348" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15498:15789" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15528:15779" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15596:15635" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15705:15773" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15832:16238" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="15895:15913" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16057:16232" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16088:16227" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16152:16188" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16284:16583" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16346:16364" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16462:16579" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16498:16537" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16683:17296" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="16857:16957" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17052:17070" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17168:17292" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17205:17248" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17338:17622" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17400:17418" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17516:17618" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17547:17581" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17666:17964" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17728:17746" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17844:17960" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="17878:17920" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18008:18301" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18070:18088" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18186:18297" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18220:18257" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18344:18569" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18406:18424" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18524:18565" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18610:18828" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18673:18691" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18877:19205" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="18939:18957" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19055:19201" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19120:19158" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19249:19806" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19311:19329" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19452:19802" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19517:19556" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19664:19797" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19853:19884" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19925:20606" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="19961:20602" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="20139:20370" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="20324:20364" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="20660:20704" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="20759:20945" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="20806:20941" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="20992:21867" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="21032:21862" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="21210:21441" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="21395:21435" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="21621:21669" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="21914:21987" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22029:22169" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22210:22347" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22383:22791" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22419:22787" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22725:22782" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22840:23252" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="22877:23248" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="23203:23243" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="23274:23358" ph="{...}" />
+            <marker date="1523255743000" expanded="true" signature="23414:23498" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/JsonHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1536846391000" expanded="false" signature="6:58" ph="..." />
+            <marker date="1536846391000" expanded="true" signature="90:355" ph="{...}" />
+            <marker date="1536846391000" expanded="true" signature="139:264" ph="{...}" />
+            <marker date="1536846391000" expanded="true" signature="313:353" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothiOSInterface.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="285">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
-            <marker date="1539824839341" expanded="false" signature="6:56" ph="..." />
-            <marker date="1539824839341" expanded="true" signature="93:940" ph="{...}" />
+            <marker date="1541889956000" expanded="false" signature="6:56" ph="..." />
+            <marker date="1541889956000" expanded="true" signature="93:1015" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/ScrollTerminalUI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674">
+          <folding>
+            <marker date="1523255746000" expanded="false" signature="6:119" ph="..." />
+            <marker date="1523255746000" expanded="true" signature="166:2000" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="415:526" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="528:762" ph="/* We will add functionality to aloow automatic scrolling, in next release ... */" />
+            <marker date="1523255746000" expanded="true" signature="794:821" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="876:959" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="1010:1998" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="1239:1365" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="1635:1770" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="1843:1885" ph="{...}" />
+            <marker date="1523255746000" expanded="true" signature="1919:1954" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Bluetooth Terminal/TerminalController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1202">
+          <folding>
+            <marker date="1523255748000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1523255748000" expanded="true" signature="180:4063" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="476:729" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="777:1043" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="950:1039" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="1134:1683" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="1325:1572" ph="/* Here we assign the 'Coroutine' that will handle your reading Functionality, this will improve your code style ... */" />
+            <marker date="1523255748000" expanded="true" signature="1782:1914" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2006:2103" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2032:2100" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2198:2246" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2268:2484" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2339:2481" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2497:2691" ph="/* ############################## Reading Data  ########################################## ... */" />
+            <marker date="1523255748000" expanded="true" signature="2747:3860" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2750:2807" ph="/* Manage Reading Coroutine ... */" />
+            <marker date="1523255748000" expanded="true" signature="2904:3747" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="2963:3721" ph="{...}" />
+            <marker date="1523255748000" expanded="true" signature="3333:3715" ph="/* Note: You should notice the possiblity that at the time of calling read() a whole line has not yet completly r ... */" />
+            <marker date="1523255748000" expanded="true" signature="3941:4060" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Devices Discovery/BtDiscovery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="72" />
+          <folding>
+            <marker date="1523255751000" expanded="true" signature="6:162" ph="..." />
+            <marker date="1523255751000" expanded="true" signature="204:3036" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="338:530" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="476:527" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="548:735" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="801:1632" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="807:1020" ph="/* Remember : dev != any other devices even if they're targeting the same device(because they're a connection con ... */" />
+            <marker date="1523255751000" expanded="true" signature="1108:1293" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="1703:2343" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="1753:1829" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="2376:2517" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="2549:2940" ph="{...}" />
+            <marker date="1523255751000" expanded="true" signature="2607:2896" ph="/* Since we need a refresh button behaviour. We will cancel any ongoind discovery to start again. like refresh be ... */" />
+            <marker date="1523255751000" expanded="true" signature="2960:3033" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Scripts/BluetoothDevice.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="783" column="36" selection-start-line="783" selection-start-column="36" selection-end-line="783" selection-end-column="36" />
+          <folding>
+            <marker date="1523255749000" expanded="true" signature="0:187" ph="/* Use of this asset and source code is governed by the ASSET STORE TERMS OF SERVICE AND EULA license ... */" />
+            <marker date="1523255749000" expanded="false" signature="194:308" ph="..." />
+            <marker date="1523255749000" expanded="true" signature="342:33011" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="346:561" ph="/// Represents a remote %Bluetooth device. ... " />
+            <marker date="1523255749000" expanded="true" signature="390:561" ph="/* A BluetoothDevice lets you create a connection with the respective ... */" />
+            <marker date="1523255749000" expanded="true" signature="604:33009" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="610:727" ph="/// Occurs when this BluetoothDevice instance get connected, and pass its reference. ... " />
+            <marker date="1523255749000" expanded="true" signature="784:904" ph="/// Occurs when this BluetoothDevice instance get disconnected, and pass its reference. ... " />
+            <marker date="1523255749000" expanded="true" signature="963:1101" ph="/// Occurs when this BluetoothDevice instance can't be found as a near by Device, and pass its reference. ... " />
+            <marker date="1523255749000" expanded="true" signature="1163:1309" ph="/// Occurs when this BluetoothDevice instance has been found but failed to connect to it, and pass its reference. ... " />
+            <marker date="1523255749000" expanded="true" signature="1366:1530" ph="/// Occurs when this BluetoothDevice instance failed to connect, passes error message. Can replace OnDeviceOFF an ... " />
+            <marker date="1523255749000" expanded="true" signature="1601:1725" ph="/// Occurs when on sending error. Passes this BluetoothDevice reference that has the error. ... " />
+            <marker date="1523255749000" expanded="true" signature="1784:1908" ph="/// Occurs when on reading error. Passes this BluetoothDevice reference that has the error. ... " />
+            <marker date="1523255749000" expanded="true" signature="1967:2093" ph="/// Occurs when on reading starts for this BluetoothDevice insance and Passes its reference. ... " />
+            <marker date="1523255749000" expanded="true" signature="2154:2279" ph="/// Occurs when on reading stops for this BluetoothDevice insance and Passes its reference. ... " />
+            <marker date="1523255749000" expanded="true" signature="2373:2443" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="2483:2559" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="2601:2681" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="2718:2788" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="2840:2922" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="2962:3038" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="3078:3154" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="3196:3276" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="3317:3395" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="3426:3496" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="4761:4839" ph="/// Initializes a new instance of this class. ... " />
+            <marker date="1523255749000" expanded="true" signature="4867:4938" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="5030:5408" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="5196:5387" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="5529:5604" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="5694:5846" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="5882:6202" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6279:6394" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6320:6354" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6457:6552" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6498:6532" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6590:6769" ph="/// Gets a value indicating whether this device is reading. ... " />
+            <marker date="1523255749000" expanded="true" signature="6794:6874" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6803:6831" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="6918:7509" ph="/// Gets a value indicating whether this device has data available to read.(It has one frame delay). ... " />
+            <marker date="1523255749000" expanded="true" signature="7540:7642" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="7549:7585" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="7602:7637" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="7682:7863" ph="/// Gets a value indicating whether this device is connected. ... " />
+            <marker date="1523255749000" expanded="true" signature="7890:7963" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="8029:8568" ph="/// If it's not &lt;c&gt;Null&lt;/c&gt; then the referenced &lt;c&gt;IEnumerator&lt;/c&gt; will be started directly after a reading start ... " />
+            <marker date="1523255749000" expanded="true" signature="8631:8714" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="8890:9012" ph="/// Will stop the ongoing reading couroutine, referenced by &lt;see cref=&quot;ReadingCoroutine&quot;&gt; ... " />
+            <marker date="1523255749000" expanded="true" signature="9051:9229" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="9334:9917" ph="/// Read all available &lt;c&gt;bytes&lt;/c&gt;, or read the next available packet if packetization was used. ... " />
+            <marker date="1523255749000" expanded="true" signature="9941:10317" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="9971:10297" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="10029:10178" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="10321:11099" ph="/// Read from available &lt;c&gt;bytes&lt;/c&gt; up to a max &lt;c&gt;size&lt;/c&gt; number of bytes, or read all &lt;c&gt;bytes&lt;/c&gt; _Regarding ... " />
+            <marker date="1523255749000" expanded="true" signature="11131:11247" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="11161:11227" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="11252:11835" ph="/// Read all available &lt;c&gt;bytes&lt;/c&gt;, or read the next available packet if packetization was used. ... " />
+            <marker date="1523255749000" expanded="true" signature="11872:12159" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="11951:12138" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="12093:12133" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="12163:12709" ph="/// Get the UUIDs used by this device instance except a BluetoothDevice initialized by Name before connecting. ... " />
+            <marker date="1523255749000" expanded="true" signature="12740:12849" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="12768:12829" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="12891:13014" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="12919:12992" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="13024:13658" ph="/// Packetize data into packets of a &lt;c&gt;size&lt;/c&gt; number of bytes per each. ... " />
+            <marker date="1523255749000" expanded="true" signature="13697:13836" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="13727:13832" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="13839:14691" ph="/// Packetize data into packets, each packets ends with the byte &lt;c&gt;byt&lt;/c&gt;. ... " />
+            <marker date="1523255749000" expanded="true" signature="14727:14865" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="14757:14860" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="14869:15252" ph="/// Sets the underlying buffer size, and stops it from changing size dynamically. This will save resources. ... " />
+            <marker date="1523255749000" expanded="true" signature="15291:15383" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="15321:15378" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="15451:16005" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="15503:16000" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="15535:15744" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="15767:15824" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="16056:16135" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="16303:16406" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="16312:16352" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="16360:16402" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="16475:17130" ph="/// Gets or sets the name of this device. ... " />
+            <marker date="1523255749000" expanded="true" signature="17154:17569" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="17163:17328" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="17208:17301" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="17336:17565" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="17364:17391" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="17642:17836" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="17910:18578" ph="/// Gets or sets the mac address of this device. ... " />
+            <marker date="1523255749000" expanded="true" signature="18607:18971" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="18616:18785" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="18660:18757" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="18793:18967" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="19003:19710" ph="/// Gets or sets the UUI. ... " />
+            <marker date="1523255749000" expanded="true" signature="19732:19853" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="19741:19764" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="19772:19849" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="19890:20186" ph="/// Gets or sets a value indicating whether this device will read. ... " />
+            <marker date="1523255749000" expanded="true" signature="20210:20325" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="20219:20251" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="20259:20321" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="20365:20937" ph="/// Gets and Sets the reading thread/process ID number of this device instance. ... " />
+            <marker date="1523255749000" expanded="true" signature="20960:21086" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="20969:20996" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="21004:21082" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="21089:22322" ph="/// &lt;summary&gt; ... " />
+            <marker date="1523255749000" expanded="true" signature="22382:22509" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="22512:22589" ph="/// Equivalent to connect(10, 1000, false) . ... " />
+            <marker date="1523255749000" expanded="true" signature="22615:22652" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="22656:22737" ph="///  Equivalent to connect(tries, 1000, false) . ... " />
+            <marker date="1523255749000" expanded="true" signature="22775:22999" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="22785:22958" ph="/* after closing ConnectionMode isn't right most of the time. ... */" />
+            <marker date="1523255749000" expanded="true" signature="23003:23086" ph="/// Equivalent to connect(attempts, time, false) . ... " />
+            <marker date="1523255749000" expanded="true" signature="23133:23176" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="23181:24984" ph="/// Connect to this device. ... " />
+            <marker date="1523255749000" expanded="true" signature="25052:25120" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="25125:28183" ph="/// Connect to this device. ... " />
+            <marker date="1523255749000" expanded="true" signature="28313:28498" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="28523:28599" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="28553:28595" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="28604:29480" ph="/// Sends a &lt;c&gt;byte[]&lt;c/&gt; array to this device. ... " />
+            <marker date="1523255749000" expanded="true" signature="29512:29638" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="29562:29585" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="29642:29890" ph="/// Similar to send(byte[]) , but it's a synchronouse/blocking method. send(byte[]) will raise exception if it wa ... " />
+            <marker date="1523255749000" expanded="true" signature="29931:30111" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="29962:29991" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="30115:31545" ph="/* TODO this method check if this instance represent the same physical device ... */" />
+            <marker date="1523255749000" expanded="true" signature="31596:31706" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="31793:31851" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="31896:32157" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="31997:32109" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="32208:32897" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="32231:32893" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="32252:32518" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="32563:32665" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="32705:32786" ph="{...}" />
+            <marker date="1523255749000" expanded="true" signature="32791:32867" ph="/* Free your own state (unmanaged objects). ... */" />
+            <marker date="1523255749000" expanded="true" signature="32943:33006" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/BluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3111">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <marker date="1545460111895" expanded="false" signature="6:88" ph="..." />
+            <marker date="1545460111895" expanded="true" signature="138:7057" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="824:881" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="957:964" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="1019:2753" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="1912:2743" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2019:2074" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2097:2430" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2450:2735" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2572:2730" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2775:3118" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="2866:2900" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3141:4032" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3259:3305" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="3382:3607" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4063:4754" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4115:4211" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4236:4590" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4318:4517" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="4788:5136" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5165:5592" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5221:5362" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5375:5436" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5621:5835" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="5868:6818" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6112:6143" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6248:6325" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6848:7054" ph="{...}" />
+            <marker date="1545460111895" expanded="true" signature="6904:6973" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BT_Library/Demos/Android2Android/ServerClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+          <folding>
+            <marker date="1523255747000" expanded="true" signature="6:131" ph="..." />
+            <marker date="1523255747000" expanded="true" signature="174:4773" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="518:775" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="880:1141" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="1048:1138" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="1196:1648" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="1230:1438" ph="/* Assign the 'Coroutine' that will handle your reading Functionality, this will improve your code style ... */" />
+            <marker date="1523255747000" expanded="true" signature="1740:2337" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="1816:1983" ph="/* We didn't use this when connecting to Bluetooth modules ... */" />
+            <marker date="1523255747000" expanded="true" signature="2017:2225" ph="/* Assign the 'Coroutine' that will handle your reading Functionality, this will improve your code style ... */" />
+            <marker date="1523255747000" expanded="true" signature="2437:2572" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2658:2714" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2684:2711" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2803:2851" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2874:3046" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="2945:3043" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3075:3588" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3211:3545" ph="/* start a server for 100 second, and close after the first connection attempt by a device that has the same UUID ... */" />
+            <marker date="1523255747000" expanded="true" signature="3700:4496" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3703:3760" ph="/* Manage Reading Coroutine ... */" />
+            <marker date="1523255747000" expanded="true" signature="3852:4383" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3912:4356" ph="{...}" />
+            <marker date="1523255747000" expanded="true" signature="3919:4110" ph="/* Send and read in this library use bytes. So you have to choose your own encoding. ... */" />
+            <marker date="1523255747000" expanded="true" signature="4579:4769" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/SerialBluetoothController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+          <folding>
+            <marker date="1545482458676" expanded="true" signature="6:225" ph="..." />
+            <marker date="1545482458676" expanded="true" signature="243:6252" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="295:6250" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="882:1008" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1069:1125" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1168:1342" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1390:1621" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1658:2409" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1693:2399" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1749:2334" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="1935:2037" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="2078:2176" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="2217:2315" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="2444:2676" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="2753:2966" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3036:3416" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3111:3405" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3208:3355" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3263:3337" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3448:3493" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3529:3702" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3782:3832" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="3876:4544" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="4188:4426" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="4593:5041" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="4698:4885" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="4767:4871" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="4918:5018" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5093:5193" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5241:5381" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5293:5371" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5429:5695" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5483:5541" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5584:5659" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5730:5772" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5808:5850" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5888:5939" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="5973:6244" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="6020:6085" ph="{...}" />
+            <marker date="1545482458676" expanded="true" signature="6123:6188" ph="{...}" />
           </folding>
         </state>
       </provider>

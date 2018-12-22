@@ -14,6 +14,7 @@ public class BluetoothController : MonoBehaviour
 	[SerializeField] private Text _writeTime;
     [SerializeField] private Text _error;
     [SerializeField] private Text _uuID;
+	[SerializeField] private Toggle _isAndroidToAndroid;
 
     public float countdown = 5.0f;
 	private float _timePerSecond = 0;

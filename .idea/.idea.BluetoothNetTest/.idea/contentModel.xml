@@ -2,12 +2,66 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="BT_Library" t="Include">
+          <e p="Arduino_Basic_Test" t="Include">
+            <e p="Read me.txt" t="Include" />
+          </e>
+          <e p="Demos" t="Include">
+            <e p="Android2Android" t="Include">
+              <e p="ReadMe.txt" t="Include" />
+              <e p="ServerClient.cs" t="Include" />
+            </e>
+            <e p="Automatic Connection" t="Include">
+              <e p="AutoConnect.cs" t="Include" />
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+            <e p="Basic Demo" t="Include">
+              <e p="BasicDemo.cs" t="Include" />
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+            <e p="Bluetooth Joystick Tutorial" t="Include">
+              <e p="JoystickHandler.cs" t="Include" />
+            </e>
+            <e p="Bluetooth Terminal" t="Include">
+              <e p="ReadMe.txt" t="Include" />
+              <e p="TerminalController.cs" t="Include" />
+            </e>
+            <e p="Devices Discovery" t="Include">
+              <e p="BtDiscovery.cs" t="Include" />
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+            <e p="High Bit Rate Terminal" t="Include">
+              <e p="HighRateTerminal.cs" t="Include" />
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+            <e p="ReadMe.txt" t="Include" />
+          </e>
+          <e p="Old Version" t="Include">
+            <e p="Older Version.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="BluetoothAdapter.cs" t="Include" />
+            <e p="BluetoothDevice.cs" t="Include" />
+            <e p="CoreLibrary" t="Include">
+              <e p="BtBridge.cs" t="Include" />
+              <e p="BtPackets.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="BtEditor.cs" t="Include" />
+              <e p="BtEditorLib.cs" t="Include" />
+              <e p="PluginsMerger.cs" t="Include" />
+            </e>
+            <e p="ScrollTerminalUI.cs" t="Include" />
+          </e>
+        </e>
         <e p="Script" t="Include">
           <e p="BluetoothController.cs" t="Include" />
           <e p="BluetoothiOSInterface.cs" t="Include" />
           <e p="JsonHelper.cs" t="Include" />
+          <e p="SerialBluetoothController.cs" t="Include" />
         </e>
       </e>
       <e p="BluetoothNetTest.sln" t="IncludeFlat" />
