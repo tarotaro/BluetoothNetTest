@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading;
 using TechTweaking.Bluetooth;
 using Unity.Collections.LowLevel.Unsafe;
@@ -14,15 +16,15 @@ namespace Serial
     {
         
         private static SerialBluetoothController _singleInstance = new SerialBluetoothController();
-        Queue<byte> readQueue = new Queue<byte>();
-        Queue<byte> writeQueue = new Queue<byte>();
-        private BluetoothDevice client;
-        private BluetoothDevice server;
+        Queue<byte> readQueue = new Queue<byte>();        
+        private BluetoothDevice device;
         private ConnectState state = ConnectState.DisConnect;
-        private String uuid = GUID.Generate().ToString().Substring(0, 4);
-        private List<BluetoothDevice> devices = new List<BluetoothDevice>();
-        private Thread writeQueueThread;
-        
+        private String uuid = "00001101-0000-1000-8000-00805F9B34FB";
+        private List<BluetoothDevice> devices = new List<BluetoothDevice>();        
+        private String serverId;
+        private List<BluetoothController.Device> devList;
+
+
         enum ConnectState
         {
             DisConnect = 0,
@@ -37,64 +39,55 @@ namespace Serial
 
         public void InitSerialBluetooth()
         {
-            BluetoothAdapter.askEnableBluetooth();
-            writeQueueThread = new Thread(WriteQueueThreadWork);
-            writeQueueThread.Start();
+            BluetoothAdapter.askEnableBluetooth();            
+            BluetoothAdapter.OnConnected += HandleOnConnected;
         }
 
-        public void deInitialSerialBluetooth()
+        void HandleOnConnected(BluetoothDevice obj)
         {
-            writeQueueThread.Abort();
+            obj.UUID = uuid;            
+            state = ConnectState.Connected;           
+        }
+
+
+        public void DeInitialSerialBluetooth()
+        {            
             BluetoothAdapter.OnDeviceDiscovered -= HandleOnDeviceDiscovered;
             BluetoothAdapter.OnClientRequest -= HandleOnClientRequest;
                         
-        }
+        }        
 
-        void WriteQueueThreadWork()
-        {
-            while (true)
-            {
-                if (writeQueue.Count > 0)
-                {
-                    int sendedCnt = writeQueue.Count;
-                    byte[] sended = new byte [sendedCnt];
-
-                    for (int i = 0; i < sendedCnt;i++)
-                    {
-                        sended[i] = writeQueue.Dequeue();
-                    }
-
-                    if (client != null)
-                    {
-                        client.send_Blocking(sended);
-                    }
-
-                    if (server != null)
-                    {
-                        server.send_Blocking(sended);
-                    } 
-                }
-                Thread.Sleep(30);
-                
-            }
-        }
-
-        public void StartServer()
+        public void StartServer(String address)
         {
             BluetoothAdapter.OnClientRequest += HandleOnClientRequest;//listen to client remote devices trying to connect to your device		            
-            BluetoothAdapter.startServer (uuid);            
+            BluetoothAdapter.startServer (uuid,180);
+            serverId = ComputeSha256Hash(address);
+        }
+        
+        private String ComputeSha256Hash(String rawData)  
+        {  
+            // Create a SHA256   
+            using (SHA256Managed sha256Hash = new SHA256Managed())  
+            {
+                // ComputeHash - returns byte array 
+                String data = rawData.ToLower();
+                byte[] hash = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(data));  
+  
+                // Convert byte array to a string   
+                StringBuilder sb = new StringBuilder();  
+                foreach(Byte b in hash) 
+                {  
+                    sb.Append(b.ToString("X2"));
+                }  
+                return sb.ToString().Substring(0,4);  
+            }  
         }
         
         private void HandleOnClientRequest (BluetoothDevice device)
         {
-            this.client = device;
-		
-            
-            this.client.ReadingCoroutine = ReadingManager;
-
-            state = ConnectState.Connected;
-            this.client.connect ();
-		
+            this.device = device;		            
+            this.device.ReadingCoroutine = ReadingManager;           
+            this.device.connect();		
         }
 
         private IEnumerator  ReadingManager (BluetoothDevice device)
@@ -116,12 +109,13 @@ namespace Serial
 
         public string GetId()
         {
-            return uuid;
+            return serverId;
         }
 
         public void SearchDevice()
         {
             devices.Clear();
+            BluetoothAdapter.OnDeviceDiscovered -= HandleOnDeviceDiscovered;
             BluetoothAdapter.OnDeviceDiscovered += HandleOnDeviceDiscovered;
             BluetoothAdapter.startDiscovery();
         }
@@ -135,17 +129,36 @@ namespace Serial
         {
             Dictionary<String, List<BluetoothController.Device>> pairableDevice = new Dictionary<string, List<BluetoothController.Device>>();
             
-            List<BluetoothController.Device> devList = new List<BluetoothController.Device>();
+            this.devList = new List<BluetoothController.Device>();
             for (int j = 0; j < devices.Count; j++)
             {
+                if(devices[j].MacAddress.Length < 0)
+                    continue;
                 BluetoothController.Device dev = new BluetoothController.Device();
-                dev.address = devices[j].UUID;
+                String hash = ComputeSha256Hash(devices[j].MacAddress);
+                dev.address = hash;
                 dev.device = devices[j].Name;
-                devList.Add(dev);
+                this.devList.Add(dev);
+            }
+            
+            StringBuilder builder = new StringBuilder();
+            builder.Append("{\"devices\":[");
+            for (int i = 0; i < devices.Count; i++)
+            {
+                builder.Append("{\"device\":\"");
+                builder.Append(this.devList[i].device);
+                builder.Append("\",");
+                builder.Append("\"address\":\"");
+                builder.Append(this.devList[i].address);
+                builder.Append("\"}");
+                if (i+1 < devices.Count)
+                {
+                    builder.Append(",");
+                }                
             }
 
-            pairableDevice.Add("devices",devList);
-            return JsonUtility.ToJson(pairableDevice);
+            builder.Append("]}");
+            return builder.ToString();
 
         }
 
@@ -154,7 +167,7 @@ namespace Serial
             BluetoothDevice conDev = null;
             for (int j = 0; j < devices.Count; j++)
             {
-                if (devices[j].UUID.EndsWith(address))
+                if (this.devList[j].address.Equals(address))
                 {
                     conDev = devices[j];
                     break;
@@ -163,8 +176,10 @@ namespace Serial
 
             if (conDev != null)
             {
-                this.server = conDev;
-                conDev.connect();
+                this.device = conDev;
+                conDev.connect();                
+                this.device.ReadingCoroutine = ReadingManager;
+                
             }
             
         }
@@ -172,16 +187,14 @@ namespace Serial
 
         public void ConnectByListIndex(int index)
         {
-            this.server = devices[index];
+            this.device = devices[index];
             devices[index].connect();
+            this.device.ReadingCoroutine = ReadingManager;
         }
 
         public void Send(byte[] data, int len)
-        {
-            for (int j = 0; j < len; j++)
-            {
-                this.writeQueue.Enqueue(data[j]);
-            }
+        {            
+            device.send(data);
         }
 
         public bool Recv(byte[] data, int len)
@@ -216,16 +229,11 @@ namespace Serial
 
         public void DisConnect()
         {
-            if (this.client != null)
+            if (this.device != null)
             {
-                this.client.close();
+                this.device.close();
             }
-
-            if (this.server != null)
-            {
-                this.server.close();
-            }
-
+                        
             state = ConnectState.DisConnect;
         }
     }

@@ -207,7 +207,7 @@ namespace TechTweaking.Bluetooth
 		/// <description> A yes/no dialog box will appear to the user asking him to turn %Bluetooth ON</description>
 		public static void askEnableBluetooth ()
 		{
-			BtBridge.Instance.askEnableBluetooth ();
+			BtBridge.Instance.askEnableBluetooth ();			
 		}
 		/// <summary>
 		/// Starts the server.

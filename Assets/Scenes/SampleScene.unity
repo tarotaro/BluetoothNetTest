@@ -217,7 +217,7 @@ MonoBehaviour:
   _writeTime: {fileID: 922631710}
   _error: {fileID: 207147542}
   _uuID: {fileID: 1375737370}
-  _isAndroidToAndroid: {fileID: 0}
+  _isAndroidToAndroid: {fileID: 1949671989}
   countdown: 5
 --- !u!1 &31872961
 GameObject:
