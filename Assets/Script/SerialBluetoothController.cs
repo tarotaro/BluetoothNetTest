@@ -32,15 +32,18 @@ namespace Serial
             Connecting = 2,
             Failed = 3
         }
-        public static SerialBluetoothController GetInstanc()
+        public static SerialBluetoothController GetInstance()
         {
             return _singleInstance;
         }
 
         public void InitSerialBluetooth()
-        {
-            BluetoothAdapter.askEnableBluetooth();            
+        {                
+            BluetoothAdapter.askEnableBluetooth();
+            state = ConnectState.DisConnect;
+            BluetoothAdapter.OnConnected -= HandleOnConnected;
             BluetoothAdapter.OnConnected += HandleOnConnected;
+            readQueue.Clear();
         }
 
         void HandleOnConnected(BluetoothDevice obj)
@@ -49,16 +52,9 @@ namespace Serial
             state = ConnectState.Connected;           
         }
 
-
-        public void DeInitialSerialBluetooth()
-        {            
-            BluetoothAdapter.OnDeviceDiscovered -= HandleOnDeviceDiscovered;
-            BluetoothAdapter.OnClientRequest -= HandleOnClientRequest;
-                        
-        }        
-
         public void StartServer(String address)
         {
+            BluetoothAdapter.OnClientRequest -= HandleOnClientRequest;
             BluetoothAdapter.OnClientRequest += HandleOnClientRequest;//listen to client remote devices trying to connect to your device		            
             BluetoothAdapter.startServer (uuid,180);
             serverId = ComputeSha256Hash(address);
