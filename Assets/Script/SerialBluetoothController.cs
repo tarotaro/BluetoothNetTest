@@ -2,21 +2,18 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading;
 using TechTweaking.Bluetooth;
-using Unity.Collections.LowLevel.Unsafe;
-using UnityEditor;
+
 
 namespace Serial
 {
-    public sealed class SerialBluetoothController
+    public sealed class SerialBluetoothController : SingletonMonoBehaviour<SerialBluetoothController>
     {
-        
-        private static SerialBluetoothController _singleInstance = new SerialBluetoothController();
-        Queue<byte> readQueue = new Queue<byte>();        
+                
+        Queue<byte> readQueue = new Queue<byte>();
+        Queue<byte> writeQueue = new Queue<byte>(); 
         private BluetoothDevice device;
         private ConnectState state = ConnectState.DisConnect;
         private String uuid = "00001101-0000-1000-8000-00805F9B34FB";
@@ -32,9 +29,24 @@ namespace Serial
             Connecting = 2,
             Failed = 3
         }
+        
+
+        void Update()
+        {
+            if (writeQueue.Count > 0 && device.IsConnected)
+            {
+                byte [] sendData = new byte[writeQueue.Count];
+                for (int i = 0; i < writeQueue.Count; i++)
+                {
+                    sendData[i] = writeQueue.Dequeue();
+                }
+                device.send(sendData);
+            }
+        }
+
         public static SerialBluetoothController GetInstance()
         {
-            return _singleInstance;
+            return Instance;
         }
 
         public void InitSerialBluetooth()
@@ -44,6 +56,7 @@ namespace Serial
             BluetoothAdapter.OnConnected -= HandleOnConnected;
             BluetoothAdapter.OnConnected += HandleOnConnected;
             readQueue.Clear();
+            writeQueue.Clear();
         }
 
         void HandleOnConnected(BluetoothDevice obj)
@@ -180,7 +193,6 @@ namespace Serial
             
         }
 
-
         public void ConnectByListIndex(int index)
         {
             this.device = devices[index];
@@ -189,8 +201,11 @@ namespace Serial
         }
 
         public void Send(byte[] data, int len)
-        {            
-            device.send(data);
+        {
+            for (int i = 0; i < len; i++)
+            {
+                writeQueue.Enqueue(data[i]);
+            }
         }
 
         public bool Recv(byte[] data, int len)
