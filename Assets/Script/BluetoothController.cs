@@ -12,7 +12,11 @@ public class BluetoothController : MonoBehaviour
 	[SerializeField] private Text _dataLengthPerSecond;
 	[SerializeField] private Text _readTime;
 	[SerializeField] private Text _writeTime;
-	public float countdown = 5.0f;
+    [SerializeField] private Text _error;
+    [SerializeField] private Text _uuID;
+	[SerializeField] private Toggle _isAndroidToAndroid;
+
+    public float countdown = 5.0f;
 	private float _timePerSecond = 0;
 	private int _alldataLength = 0;
     private int _prealldataLength = 0;
@@ -35,7 +39,9 @@ public class BluetoothController : MonoBehaviour
 	private Device[] _devices;
 // Use this for initialization
 	void Start () {
-		
+#if UNITY_ANDROID		
+		Serial.SerialBluetoothController.GetInstance().InitSerialBluetooth();
+#endif
 	}
 	
 	// Update is called once per frame
@@ -89,8 +95,8 @@ public class BluetoothController : MonoBehaviour
 			recv();
 		}
 #endif 
-#if UNITY_ANDROID		
-		if (_javaClass != null)
+#if UNITY_ANDROID
+		if (_isAndroidToAndroid.isOn)
 		{
 			int state = connectState();
 			countdown -= Time.deltaTime;
@@ -99,13 +105,12 @@ public class BluetoothController : MonoBehaviour
 				getSearchDevice();
 				countdown = 5.0f;
 			}
-
 			
 			switch (state)
 			{
 				case 0:
 					_text.text = "接続していません";
-                    _isServerStart = false;
+					_isServerStart = false;
 					break;
 				case 1:
 					_text.text = "すでに接続しています";
@@ -115,24 +120,66 @@ public class BluetoothController : MonoBehaviour
 					break;
 				case 3:
 					_text.text = "接続失敗しました";
-                    _isServerStart = false;
-                    break;
-						
+					_isServerStart = false;
+					break;
+
 			}
 
 			if (state == 1)
 			{
 				recv();
-                send();
-                
-                frame++;
-				if (!_isServerStart && state == 1)
-				{
-					_readTime.text = " " + _javaClass.CallStatic<long>("getReadTime");
-					_writeTime.text = " " + _javaClass.CallStatic<long>("getWriteTime");
-				}
+				send();
+
+				frame++;			
 			}
-			
+		}
+		else
+		{
+
+			if (_javaClass != null)
+			{
+				int state = connectState();
+				countdown -= Time.deltaTime;
+				if (countdown <= 0.0f && state != 1)
+				{
+					getSearchDevice();
+					countdown = 5.0f;
+				}
+
+
+				switch (state)
+				{
+					case 0:
+						_text.text = "接続していません";
+						_isServerStart = false;
+						break;
+					case 1:
+						_text.text = "すでに接続しています";
+						break;
+					case 2:
+						_text.text = "接続中";
+						break;
+					case 3:
+						_text.text = "接続失敗しました";
+						_isServerStart = false;
+						break;
+
+				}
+
+				if (state == 1)
+				{
+					recv();
+					send();
+
+					frame++;
+					if (!_isServerStart && state == 1)
+					{
+						_readTime.text = " " + _javaClass.CallStatic<long>("getReadTime");
+						_writeTime.text = " " + _javaClass.CallStatic<long>("getWriteTime");
+					}
+				}
+
+			}
 		}
 #endif
 	}
@@ -143,9 +190,16 @@ public class BluetoothController : MonoBehaviour
 		byte[] data = new byte [128];
 		for (int cnt = 0; cnt < 128; cnt++)
 		{
-			data[cnt] = (byte)cnt;
+			data[cnt] = (byte) cnt;
 		}
-		_javaClass.CallStatic("send",data,128);
+		if (_isAndroidToAndroid.isOn)
+		{
+			Serial.SerialBluetoothController.GetInstance().Send(data,128);
+		}
+		else
+		{
+			_javaClass.CallStatic("send", data, 128);
+		}
 #endif
 #if UNITY_IOS
 		byte[] data = new byte [128];
@@ -156,13 +210,25 @@ public class BluetoothController : MonoBehaviour
 		BluetoothiOSInterface._send(data,128);
 #endif
 	}
-	
-	private void recv(){
-#if UNITY_ANDROID
-        byte[] data 
-         = _javaClass.CallStatic<byte[]>("recv",256);
 
-        if(data!=null){
+	private void recv()
+	{
+#if UNITY_ANDROID
+
+		byte[] data = new byte[256];		
+		bool isFulledQueue = false;
+		if (_isAndroidToAndroid.isOn)
+		{
+			isFulledQueue = Serial.SerialBluetoothController.GetInstance().Recv(data, 256);
+		}
+		else
+		{
+
+			isFulledQueue = true;
+			data = _javaClass.CallStatic<byte[]>("recv", 256);
+		}
+
+		if(data!=null && isFulledQueue){
             _alldataLength += 256;
         }        
         _timePerSecond +=  Time.deltaTime;
@@ -196,19 +262,45 @@ public class BluetoothController : MonoBehaviour
     public void ServerStart()
     {
 #if UNITY_ANDROID
-	   if (_javaClass == null)
-	   {
-		   _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");
-	   }
-	   if (!_isServerStart)
-        {
-            _isServerStart = true;
-            _javaClass.CallStatic("startServer");
-        }
+	    if (_isAndroidToAndroid.isOn)
+	    {
+		    if (_javaClass == null)
+		    {
+			    _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");
+		    }
+
+		    String serverAddress = _javaClass.CallStatic<String>("getBluetoothDeviceAddress");
+		    Serial.SerialBluetoothController.GetInstance().StartServer(serverAddress);
+		    _isServerStart = true;
+		    _uuID.text = Serial.SerialBluetoothController.GetInstance().GetId();		    
+		    _isAndroidToAndroid.enabled = false;
+	    }
+	    else
+	    {
+		    if (_javaClass == null)
+		    {
+			    _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");
+		    }
+		    if (!_isServerStart)
+		    {
+			    if (_javaClass.CallStatic<Boolean>("isAdvertiseSupported"))
+			    {
+				    _isServerStart = true;
+				    _javaClass.CallStatic("startServer");
+				    _uuID.text = _javaClass.CallStatic<String>("getUUIDForName");
+				    _isAndroidToAndroid.enabled = false;
+			    }
+			    else
+			    {
+				    _error.text = "Hostになれません";
+			    }
+		    }
+	    }
 #endif
 #if UNITY_IOS
         _isServerStart = true;
         BluetoothiOSInterface._startServer();
+        _uuID.text = BluetoothiOSInterface._getId();
 #endif
     }
 
@@ -216,29 +308,52 @@ public class BluetoothController : MonoBehaviour
     {
 #if UNITY_IOS
 	    BluetoothiOSInterface._searchDevice();
-#endif 
-#if UNITY_EDITOR
-        Debug.Log("UnityEditorでは使用できません");
+
 #elif UNITY_ANDROID
-        if(_javaClass == null){
-        _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");	        
-	        _javaClass.CallStatic("searchDevice");
+	    if (_isAndroidToAndroid.isOn)
+	    {
+		    Serial.SerialBluetoothController.GetInstance().SearchDevice();		    
 	    }
+	    else 
+	    {
+		    if (_javaClass == null)
+		    {
+			    _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");
+		    }
+
+		    _javaClass.CallStatic("searchDevice");
+	    }
+	    _isAndroidToAndroid.enabled = false;
 #endif
     }
 
     public void onConnect()
     {
 #if UNITY_ANDROID
-        if (_javaClass != null)
-        {
-            String address = _devices[_dropdown.value].address;
-            _javaClass.CallStatic("connectById",address);
-        }
-        else
-        {
-            Debug.Log("サーチなしでは使用できません");
-        }
+	    if (_isAndroidToAndroid.isOn)
+	    {
+		    if (_devices.Length != 0)
+		    {
+			    String address = _devices[_dropdown.value].address;
+			    Serial.SerialBluetoothController.GetInstance().ConnectById(address);
+		    }
+		    else
+		    {
+			    Debug.Log("サーチなしでは使用できません");
+		    }
+	    }
+	    else
+	    {
+		    if (_javaClass != null)
+		    {
+			    String address = _devices[_dropdown.value].address;
+			    _javaClass.CallStatic("connectById", address);
+		    }
+		    else
+		    {
+			    Debug.Log("サーチなしでは使用できません");
+		    }
+	    }
 #endif
 #if UNITY_IOS
 	    String address = _devices[_dropdown.value].address;		    
@@ -249,32 +364,52 @@ public class BluetoothController : MonoBehaviour
 
 	public int connectState()
 	{
-#if UNITY_ANDROID	
-		int state = _javaClass.CallStatic<int>("getConnectState");
-		return state;
+#if UNITY_ANDROID
+		if (_isAndroidToAndroid.isOn)
+		{
+			int state = Serial.SerialBluetoothController.GetInstance().GetConnectState();
+			return state;
+		}
+		else
+		{
+			int state = _javaClass.CallStatic<int>("getConnectState");
+			return state;
+		}
 #endif
 #if UNITY_IOS
 		int state = BluetoothiOSInterface._getConnectState();
 		return state;
 #endif
 		return 0;
-	} 
+	}
 
 	public void getSearchDevice()
 	{
-#if UNITY_ANDROID	
-	
-		String jsonDevices = _javaClass.CallStatic<String>("GetBluetoothIDList");
-        _devices = JsonHelper.FromJson<Device>(jsonDevices);
+#if UNITY_ANDROID
+		String jsonDevices;
+
+		if (_isAndroidToAndroid.isOn)
+		{
+			jsonDevices = Serial.SerialBluetoothController.GetInstance().GetBluetoothIDList();
+		}
+		else
+		{
+			jsonDevices = _javaClass.CallStatic<String>("GetBluetoothIDList");
+		}
+
+		_devices = JsonHelper.FromJson<Device>(jsonDevices);
 		_dropdown.ClearOptions();
-        if (_devices == null || _devices.Length == 0) {
-            return;
-        }
-        List<String> dropdownList =new List<String>();
-        for (int i = 0; i < _devices.Length;i++ )
+		if (_devices == null || _devices.Length == 0)
+		{
+			return;
+		}
+
+		List<String> dropdownList = new List<String>();
+		for (int i = 0; i < _devices.Length; i++)
 		{
 			dropdownList.Add(_devices[i].device + ":" + _devices[i].address);
 		}
+
 		_dropdown.AddOptions(dropdownList);
 #endif
 #if UNITY_IOS
@@ -284,7 +419,7 @@ public class BluetoothController : MonoBehaviour
 		if (_devices == null || _devices.Length == 0) {
 			return;
 		}
-		List<String> dropdownList =new List<String>();
+		List<String> dropdownList = new List<String>();
 		for (int i = 0; i < _devices.Length;i++ )
 		{
 			dropdownList.Add(_devices[i].device + ":" + _devices[i].address);
@@ -293,13 +428,22 @@ public class BluetoothController : MonoBehaviour
 #endif
 	}
 
-    public void Disconnect()
+	public void Disconnect()
     {
 #if UNITY_ANDROID
-        if (_javaClass != null)
-        {
-            _javaClass.CallStatic("disConnect");
-        }
+	    if (_isAndroidToAndroid.isOn)
+	    {
+		    Serial.SerialBluetoothController.GetInstance().DisConnect();
+		    _isAndroidToAndroid.enabled = true;
+	    }
+	    else
+	    {
+		    if (_javaClass != null)
+		    {
+			    _javaClass.CallStatic("disConnect");
+			    _isAndroidToAndroid.enabled = true;
+		    }
+	    }
 #endif
 #if UNITY_IOS
 	    BluetoothiOSInterface._disConnect();
