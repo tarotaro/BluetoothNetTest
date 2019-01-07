@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using UnityEngine;
-
+#if UNITY_IOS
 public class BluetoothiOSInterface {
 
 	[DllImport("__Internal")]
@@ -27,3 +27,4 @@ public class BluetoothiOSInterface {
 	[DllImport("__Internal")]
 	public static extern void _disConnect();
 }
+#endif
