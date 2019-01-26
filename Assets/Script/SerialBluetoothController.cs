@@ -19,6 +19,8 @@ namespace Serial
         Queue<byte> readQueue = new Queue<byte>();
         private BluetoothDevice device;
         private ConnectState state = ConnectState.DisConnect;
+        private WriteState wstate = WriteState.Success;
+        private ReadState rstate = ReadState.Success;
         private String uuid = "00001101-0000-1000-8000-00805F9B34FB";
         private List<BluetoothDevice> devices = new List<BluetoothDevice>();
         private String serverId;
@@ -31,8 +33,20 @@ namespace Serial
         {
             DisConnect = 0,
             Connected = 1,
-            Connecting = 2,
+            Connecting = 2,            
             Failed = 3
+        }
+
+        enum WriteState
+        {
+            Success = 0,
+            WriteFail = 1
+        }
+
+        enum ReadState
+        {
+            Success = 0, 
+            WaitReading = 1            
         }
         public static SerialBluetoothController GetInstance()
         {
@@ -93,6 +107,7 @@ namespace Serial
 
             while (device.IsReading)
             {
+                rstate = ReadState.Success;
                 byte[] msg = device.read();
                 if (msg != null)
                 {
@@ -104,6 +119,8 @@ namespace Serial
 
                 yield return null;
             }
+
+            rstate = ReadState.WaitReading;
 
         }
 
@@ -199,9 +216,22 @@ namespace Serial
             {
                 device.setBufferSize(len);
                 lastBufLen = len;
+                bool iswrite = device.send_Blocking(data);
+                if (iswrite)
+                {
+                    wstate = WriteState.Success;
+                }
+                else
+                {
+                    wstate = WriteState.WriteFail;
+                }
             }
-            device.send(data);
-            // device.send_Blocking(data);
+            else
+            {
+                device.send(data);
+                wstate = WriteState.Success;
+            }
+            
         }
 
         public bool Recv(byte[] data, int len)
@@ -232,6 +262,16 @@ namespace Serial
         public int GetConnectState()
         {
             return (int)state;
+        }
+
+        public int GetWriteState()
+        {
+            return (int) wstate;
+        }
+
+        public int GetReadState()
+        {
+            return (int) rstate;
         }
 
         public void DisConnect()
