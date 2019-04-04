@@ -39,9 +39,6 @@ public class BluetoothController : MonoBehaviour
 	private Device[] _devices;
 // Use this for initialization
 	void Start () {
-#if UNITY_ANDROID		
-		Serial.SerialBluetoothController.GetInstance().InitSerialBluetooth();
-#endif
 	}
 	
 	// Update is called once per frame
@@ -266,13 +263,14 @@ public class BluetoothController : MonoBehaviour
 	    {
 		    if (_javaClass == null)
 		    {
-			    _javaClass = new AndroidJavaClass("btlib.xjigen.com.btsocketlib.BtSocketLib");
+			    _javaClass = new AndroidJavaClass("btserial.xjigen.com.btseriallib");
 		    }
 
 		    String serverAddress = _javaClass.CallStatic<String>("getBluetoothDeviceAddress");
-		    Serial.SerialBluetoothController.GetInstance().StartServer(serverAddress);
+		    
 		    _isServerStart = true;
-		    _uuID.text = Serial.SerialBluetoothController.GetInstance().GetId();		    
+		    _javaClass.CallStatic("startServer");
+		    _uuID.text = _javaClass.CallStatic<String>("getUUIDForName");
 		    _isAndroidToAndroid.enabled = false;
 	    }
 	    else
@@ -312,7 +310,12 @@ public class BluetoothController : MonoBehaviour
 #elif UNITY_ANDROID
 	    if (_isAndroidToAndroid.isOn)
 	    {
-		    Serial.SerialBluetoothController.GetInstance().SearchDevice();		    
+		    if (_javaClass == null)
+		    {
+			    _javaClass = new AndroidJavaClass("btserial.xjigen.com.btseriallib");
+		    }
+		    
+		    _javaClass.CallStatic("searchDevice");
 	    }
 	    else 
 	    {
@@ -335,7 +338,7 @@ public class BluetoothController : MonoBehaviour
 		    if (_devices.Length != 0)
 		    {
 			    String address = _devices[_dropdown.value].address;
-			    Serial.SerialBluetoothController.GetInstance().ConnectById(address);
+			    _javaClass.CallStatic("connectById", address);
 		    }
 		    else
 		    {
@@ -367,7 +370,7 @@ public class BluetoothController : MonoBehaviour
 #if UNITY_ANDROID
 		if (_isAndroidToAndroid.isOn)
 		{
-			int state = Serial.SerialBluetoothController.GetInstance().GetConnectState();
+			int state = _javaClass.CallStatic<int>("getConnectState");
 			return state;
 		}
 		else
@@ -390,7 +393,7 @@ public class BluetoothController : MonoBehaviour
 
 		if (_isAndroidToAndroid.isOn)
 		{
-			jsonDevices = Serial.SerialBluetoothController.GetInstance().GetBluetoothIDList();
+			jsonDevices = _javaClass.CallStatic<String>("GetBluetoothIDList");
 		}
 		else
 		{
@@ -433,7 +436,7 @@ public class BluetoothController : MonoBehaviour
 #if UNITY_ANDROID
 	    if (_isAndroidToAndroid.isOn)
 	    {
-		    Serial.SerialBluetoothController.GetInstance().DisConnect();
+		    _javaClass.CallStatic("disConnect");
 		    _isAndroidToAndroid.enabled = true;
 	    }
 	    else
