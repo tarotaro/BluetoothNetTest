@@ -33,5 +33,6 @@
         <activity android:name="com.techtweaking.bluetoothcontroller.ForwardingActivity"
                   android:label="@string/app_name">
         </activity>
+        
     </application>
 </manifest>

@@ -95,40 +95,43 @@ public class BluetoothController : MonoBehaviour
 #if UNITY_ANDROID
 		if (_isAndroidToAndroid.isOn)
 		{
-			int state = connectState();
-			countdown -= Time.deltaTime;
-			if (countdown <= 0.0f && state != 1)
-			{
-				getSearchDevice();
-				countdown = 5.0f;
-			}
-			
-			switch (state)
-			{
-				case 0:
-					_text.text = "接続していません";
-					_isServerStart = false;
-					break;
-				case 1:
-					_text.text = "すでに接続しています";
-					break;
-				case 2:
-					_text.text = "接続中";
-					break;
-				case 3:
-					_text.text = "接続失敗しました";
-					_isServerStart = false;
-					break;
+            if (_javaClass != null)
+            {
+                int state = connectState();
+                countdown -= Time.deltaTime;
+                if (countdown <= 0.0f && state != 1)
+                {
+                    getSearchDevice();
+                    countdown = 5.0f;
+                }
 
-			}
+                switch (state)
+                {
+                    case 0:
+                        _text.text = "接続していません";
+                        _isServerStart = false;
+                        break;
+                    case 1:
+                        _text.text = "すでに接続しています";
+                        break;
+                    case 2:
+                        _text.text = "接続中";
+                        break;
+                    case 3:
+                        _text.text = "接続失敗しました";
+                        _isServerStart = false;
+                        break;
 
-			if (state == 1)
-			{
-				recv();
-				send();
+                }
 
-				frame++;			
-			}
+                if (state == 1)
+                {
+                    recv();
+                    send();
+
+                    frame++;
+                }
+            }
 		}
 		else
 		{
@@ -191,8 +194,8 @@ public class BluetoothController : MonoBehaviour
 		}
 		if (_isAndroidToAndroid.isOn)
 		{
-			Serial.SerialBluetoothController.GetInstance().Send(data,128);
-		}
+            _javaClass.CallStatic("send", data, 128);
+        }
 		else
 		{
 			_javaClass.CallStatic("send", data, 128);
@@ -216,8 +219,9 @@ public class BluetoothController : MonoBehaviour
 		bool isFulledQueue = false;
 		if (_isAndroidToAndroid.isOn)
 		{
-			isFulledQueue = Serial.SerialBluetoothController.GetInstance().Recv(data, 256);
-		}
+            isFulledQueue = true;
+            data = _javaClass.CallStatic<byte[]>("recv", 256);
+        }
 		else
 		{
 
@@ -263,7 +267,7 @@ public class BluetoothController : MonoBehaviour
 	    {
 		    if (_javaClass == null)
 		    {
-			    _javaClass = new AndroidJavaClass("btserial.xjigen.com.btseriallib");
+			    _javaClass = new AndroidJavaClass("btserial.xjigen.com.btseriallib.BtSerialLib");
 		    }
 
 		    String serverAddress = _javaClass.CallStatic<String>("getBluetoothDeviceAddress");
@@ -312,7 +316,7 @@ public class BluetoothController : MonoBehaviour
 	    {
 		    if (_javaClass == null)
 		    {
-			    _javaClass = new AndroidJavaClass("btserial.xjigen.com.btseriallib");
+			    _javaClass = new AndroidJavaClass("btserial.xjigen.com.btseriallib.BtSerialLib");
 		    }
 		    
 		    _javaClass.CallStatic("searchDevice");
@@ -383,7 +387,6 @@ public class BluetoothController : MonoBehaviour
 		int state = BluetoothiOSInterface._getConnectState();
 		return state;
 #endif
-		return 0;
 	}
 
 	public void getSearchDevice()

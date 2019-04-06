@@ -61,7 +61,6 @@
           <e p="BluetoothController.cs" t="Include" />
           <e p="BluetoothiOSInterface.cs" t="Include" />
           <e p="JsonHelper.cs" t="Include" />
-          <e p="SerialBluetoothController.cs" t="Include" />
         </e>
       </e>
       <e p="BluetoothNetTest.sln" t="IncludeFlat" />
