@@ -33,7 +33,8 @@ public class BluetoothController : MonoBehaviour
 	public class Device
 	{
 		public String device;
-		public String address;		
+		public String address;
+		public String uuid;
 	}
 
 	private Device[] _devices;
@@ -274,7 +275,7 @@ public class BluetoothController : MonoBehaviour
 		    
 		    _isServerStart = true;
 		    _javaClass.CallStatic("startServer");
-		    _uuID.text = _javaClass.CallStatic<String>("getUUIDForName");
+		    _uuID.text = _javaClass.CallStatic<String>("getUuidForName");
 		    _isAndroidToAndroid.enabled = false;
 	    }
 	    else
@@ -289,7 +290,7 @@ public class BluetoothController : MonoBehaviour
 			    {
 				    _isServerStart = true;
 				    _javaClass.CallStatic("startServer");
-				    _uuID.text = _javaClass.CallStatic<String>("getUUIDForName");
+				    _uuID.text = _javaClass.CallStatic<String>("getUuidForName");
 				    _isAndroidToAndroid.enabled = false;
 			    }
 			    else
@@ -341,8 +342,8 @@ public class BluetoothController : MonoBehaviour
 	    {
 		    if (_devices.Length != 0)
 		    {
-			    String address = _devices[_dropdown.value].address;
-			    _javaClass.CallStatic("connectById", address);
+			    String uuid = _devices[_dropdown.value].uuid;
+			    _javaClass.CallStatic("connectByUuid", uuid);
 		    }
 		    else
 		    {
@@ -353,8 +354,8 @@ public class BluetoothController : MonoBehaviour
 	    {
 		    if (_javaClass != null)
 		    {
-			    String address = _devices[_dropdown.value].address;
-			    _javaClass.CallStatic("connectById", address);
+			    String uuid = _devices[_dropdown.value].uuid;
+			    _javaClass.CallStatic("connectByUuid", uuid);
 		    }
 		    else
 		    {
@@ -396,11 +397,11 @@ public class BluetoothController : MonoBehaviour
 
 		if (_isAndroidToAndroid.isOn)
 		{
-			jsonDevices = _javaClass.CallStatic<String>("GetBluetoothIDList");
+			jsonDevices = _javaClass.CallStatic<String>("GetBluetoothList");
 		}
 		else
 		{
-			jsonDevices = _javaClass.CallStatic<String>("GetBluetoothIDList");
+			jsonDevices = _javaClass.CallStatic<String>("GetBluetoothList");
 		}
 
 		_devices = JsonHelper.FromJson<Device>(jsonDevices);
@@ -413,7 +414,7 @@ public class BluetoothController : MonoBehaviour
 		List<String> dropdownList = new List<String>();
 		for (int i = 0; i < _devices.Length; i++)
 		{
-			dropdownList.Add(_devices[i].device + ":" + _devices[i].address);
+			dropdownList.Add(_devices[i].device + ":" + _devices[i].uuid);
 		}
 
 		_dropdown.AddOptions(dropdownList);
