@@ -83,8 +83,8 @@ public class BluetoothController : MonoBehaviour
 			frame++;
 			if (!_isServerStart && state == 1)
 			{
-				_readTime.text = " " + BluetoothiOSInterface._getReadTime();
-				_writeTime.text = " " + BluetoothiOSInterface._getWriteTime();
+				_readTime.text = " " + BluetoothiOSInterface.Bt_getReadTime();
+				_writeTime.text = " " + BluetoothiOSInterface.Bt_getWriteTime();
 			}
 			
 		}
@@ -208,7 +208,7 @@ public class BluetoothController : MonoBehaviour
 		{
 			data[cnt] = (byte)cnt;
 		}
-		BluetoothiOSInterface._send(data,128);
+		BluetoothiOSInterface.Bt_send(data,128);
 #endif
 	}
 
@@ -244,7 +244,7 @@ public class BluetoothController : MonoBehaviour
 #endif
 #if UNITY_IOS
 		byte [] data = new byte[256];
-		bool ret = BluetoothiOSInterface._recv(data,256);
+		bool ret = BluetoothiOSInterface.Bt_recv(data,256);
 
 		if (ret)
 		{
@@ -302,15 +302,15 @@ public class BluetoothController : MonoBehaviour
 #endif
 #if UNITY_IOS
         _isServerStart = true;
-        BluetoothiOSInterface._startServer();
-        _uuID.text = BluetoothiOSInterface._getId();
+        BluetoothiOSInterface.Bt_startServer();
+        _uuID.text = BluetoothiOSInterface.Bt_getUuidForName();
 #endif
     }
 
     public void onSearchServer()
     {
 #if UNITY_IOS
-	    BluetoothiOSInterface._searchDevice();
+	    BluetoothiOSInterface.Bt_searchDevice();
 
 #elif UNITY_ANDROID
 	    if (_isAndroidToAndroid.isOn)
@@ -364,8 +364,8 @@ public class BluetoothController : MonoBehaviour
 	    }
 #endif
 #if UNITY_IOS
-	    String address = _devices[_dropdown.value].address;		    
-	    BluetoothiOSInterface._connectById(address);
+	    String uuid = _devices[_dropdown.value].uuid;		    
+	    BluetoothiOSInterface.Bt_connectByUuid(uuid);
 #endif	    	    
     }
 
@@ -385,7 +385,7 @@ public class BluetoothController : MonoBehaviour
 		}
 #endif
 #if UNITY_IOS
-		int state = BluetoothiOSInterface._getConnectState();
+		int state = BluetoothiOSInterface.Bt_getConnectState();
 		return state;
 #endif
 	}
@@ -420,7 +420,7 @@ public class BluetoothController : MonoBehaviour
 		_dropdown.AddOptions(dropdownList);
 #endif
 #if UNITY_IOS
-		String jsonDevices = BluetoothiOSInterface._getBluetoothIDList();
+		String jsonDevices = BluetoothiOSInterface.Bt_getBluetoothList();
 		_devices = JsonHelper.FromJson<Device>(jsonDevices);
 		_dropdown.ClearOptions();
 		if (_devices == null || _devices.Length == 0) {
@@ -429,7 +429,7 @@ public class BluetoothController : MonoBehaviour
 		List<String> dropdownList = new List<String>();
 		for (int i = 0; i < _devices.Length;i++ )
 		{
-			dropdownList.Add(_devices[i].device + ":" + _devices[i].address);
+			dropdownList.Add(_devices[i].device + ":" + _devices[i].uuid);
 		}
 		_dropdown.AddOptions(dropdownList);
 #endif
@@ -453,7 +453,7 @@ public class BluetoothController : MonoBehaviour
 	    }
 #endif
 #if UNITY_IOS
-	    BluetoothiOSInterface._disConnect();
+	    BluetoothiOSInterface.Bt_disConnect();
 #endif	    
     }
 

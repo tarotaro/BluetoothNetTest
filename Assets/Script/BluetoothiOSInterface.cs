@@ -4,29 +4,29 @@ using UnityEngine;
 public class BluetoothiOSInterface {
 
 	[DllImport("__Internal")]
-	public static extern void _startServer();
+	public static extern void Bt_startServer();
     [DllImport("__Internal")]
-    public static extern string _getId();
+    public static extern string Bt_getUuidForName();
     [DllImport("__Internal")]
-	public static extern void _searchDevice();
+	public static extern void Bt_searchDevice();
     
 	[DllImport("__Internal")]
-	public static extern  string _getBluetoothIDList();
+	public static extern  string Bt_getBluetoothList();
 	[DllImport("__Internal")]
-	public static extern void _connectById(string address);
+	public static extern void Bt_connectByUuid(string uuid);
 	[DllImport("__Internal")]
-	public static extern void _connectByListIndex(int index);
+	public static extern void Bt_connectByListIndex(int index);
 	[DllImport("__Internal")]
-	public static extern void _send(byte[] data,int len);
+	public static extern void Bt_send(byte[] data,int len);
 	[DllImport("__Internal")]
-	public static extern bool _recv(byte[] data,int len);
+	public static extern bool Bt_recv(byte[] data,int len);
 	[DllImport("__Internal")]
-	public static extern long _getReadTime();
+	public static extern long Bt_getReadTime();
 	[DllImport("__Internal")]
-	public static extern long _getWriteTime();
+	public static extern long Bt_getWriteTime();
 	[DllImport("__Internal")]
-	public static extern int _getConnectState();
+	public static extern int Bt_getConnectState();
 	[DllImport("__Internal")]
-	public static extern void _disConnect();
+	public static extern void Bt_disConnect();
 }
 #endif
